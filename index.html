@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estate by HOMEGRAM — Premium Plotted Developments · Bahadurgarh NCR & Lansdowne Hills</title>
+<meta name="description" content="Pre-launch pricing for premium gated plots in Bahadurgarh NCR (Metro-connected) & Lansdowne Hills (Himalayan views). Register for priority access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--gold:#C9A84C;--gold-lt:#E8C97A;--gold-glow:rgba(201,168,76,.12);--gold-dim:rgba(201,168,76,.35);
+--ink:#0A0A0F;--ink-b:#111118;--ink-c:#16161F;--ink-d:#1C1C28;
+--cream:#FDFBF7;--cream-warm:#F5F0E8;--cream-mid:#EDE8DD;
+--sage:#2A3D2E;--sage-lt:#4A6B50;
+--text-dark:#1A1A2E;--text-mid:#3D3D56;--text-lt:#6B6B80;
+--ff-display:'Playfair Display',Georgia,serif;
+--ff-body:'Inter',system-ui,sans-serif;
+--ff-mono:'JetBrains Mono',monospace;
+--ease-out:cubic-bezier(.2,.8,.2,1);--ease-expo:cubic-bezier(.19,1,.22,1);
+--nav-h:72px;--max-w:1280px;
+}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-body);font-weight:400;overflow-x:hidden;background:var(--ink);color:var(--cream)}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%;height:auto}
+button{border:none;background:none;cursor:pointer;font-family:inherit}
+input,textarea,select{font-family:inherit}
+ul,ol{list-style:none}
+
+/* UTILITY */
+.container{max-width:var(--max-w);margin:0 auto;padding:0 clamp(20px,4vw,60px)}
+.section-dark{background:var(--ink);color:var(--cream);padding:clamp(80px,10vw,140px) 0}
+.section-light{background:var(--cream);color:var(--text-dark);padding:clamp(80px,10vw,140px) 0}
+.section-cream{background:var(--cream-warm);color:var(--text-dark);padding:clamp(80px,10vw,140px) 0}
+.section-gold{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:var(--ink);padding:clamp(60px,8vw,100px) 0}
+
+.eyebrow{font-family:var(--ff-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px;display:block}
+.eyebrow-gold{color:var(--gold)}
+.eyebrow-dark{color:var(--text-lt)}
+
+.heading-xl{font-family:var(--ff-display);font-weight:400;font-size:clamp(40px,6.5vw,88px);line-height:1.05;letter-spacing:-.02em}
+.heading-lg{font-family:var(--ff-display);font-weight:400;font-size:clamp(32px,4.5vw,60px);line-height:1.1;letter-spacing:-.015em}
+.heading-md{font-family:var(--ff-display);font-weight:400;font-size:clamp(24px,3vw,40px);line-height:1.15}
+.body-lg{font-size:clamp(16px,1.2vw,18px);line-height:1.75;font-weight:300}
+.gold-text{color:var(--gold)}
+.text-center{text-align:center}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border-radius:60px;transition:all .3s var(--ease-out);cursor:pointer}
+.btn-gold{background:var(--gold);color:var(--ink);border:2px solid var(--gold)}
+.btn-gold:hover{background:var(--gold-lt);box-shadow:0 12px 40px rgba(201,168,76,.4);transform:translateY(-3px)}
+.btn-outline-gold{border:2px solid var(--gold);color:var(--gold);background:transparent}
+.btn-outline-gold:hover{background:var(--gold);color:var(--ink);box-shadow:0 8px 32px rgba(201,168,76,.3)}
+.btn-white{background:#fff;color:var(--ink);border:2px solid #fff}
+.btn-white:hover{background:transparent;color:#fff;border-color:#fff}
+.btn-dark{background:var(--ink);color:var(--gold);border:2px solid var(--ink)}
+.btn-dark:hover{background:var(--ink-b);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+
+/* REVEAL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease-expo),transform .7s var(--ease-expo)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}.reveal-d5{transition-delay:.5s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* GOLD DIVIDER */
+.gold-line{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:2px;margin:20px 0}
+.gold-line-center{margin:20px auto}
+</style>
+</head>
+<body>
+
+
+<!-- ============================================================
+     STICKY NAV
+     ============================================================ -->
+<nav id="nav" style="position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:9000;display:flex;align-items:center;padding:0 clamp(20px,4vw,60px);transition:background .4s,backdrop-filter .4s,border-color .4s;border-bottom:1px solid transparent;">
+  <a href="#hero" style="margin-right:auto;display:flex;flex-direction:column;line-height:1;">
+    <span style="font-family:var(--ff-display);font-style:italic;font-size:22px;color:var(--gold);">Estate</span>
+    <span style="font-family:var(--ff-body);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-lt);margin-top:1px;">by HOMEGRAM</span>
+  </a>
+  <div id="nav-links" style="display:flex;align-items:center;gap:clamp(20px,3vw,40px);">
+    <a href="#projects" style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .25s;">Projects</a>
+    <a href="#why-us" style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .25s;">Why Us</a>
+    <a href="#calculator" style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .25s;">Returns</a>
+    <a href="#register" class="btn btn-gold" style="padding:10px 24px;font-size:11px;">Get Pre-Launch Price</a>
+  </div>
+  <button id="hamburger" aria-label="Menu" style="display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0;">
+    <span style="display:block;height:2px;background:var(--cream);transition:transform .3s,opacity .3s;"></span>
+    <span style="display:block;height:2px;background:var(--cream);transition:transform .3s,opacity .3s;"></span>
+    <span style="display:block;height:2px;background:var(--cream);transition:transform .3s,opacity .3s;"></span>
+  </button>
+</nav>
+
+<!-- ============================================================
+     HERO — FULL VIEWPORT VIDEO BG + LEAD FORM
+     ============================================================ -->
+<section id="hero" style="position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;">
+  <!-- Video BG -->
+  <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;">
+    <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4">
+  </video>
+  <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,10,15,.8) 0%,rgba(10,10,15,.4) 40%,rgba(10,10,15,.85) 100%);"></div>
+
+  <div class="container" style="position:relative;z-index:10;display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;padding-top:calc(var(--nav-h) + 40px);padding-bottom:60px;">
+    <!-- Left: Copy -->
+    <div>
+      <span class="eyebrow eyebrow-gold reveal">Pre-Launch · Limited Plots Available</span>
+      <h1 class="heading-xl reveal reveal-d1" style="color:var(--cream);">Premium Plots<br>at <em class="gold-text" style="font-style:italic;">Pre-Launch</em> Prices</h1>
+      <p class="body-lg reveal reveal-d2" style="color:rgba(255,255,255,.65);max-width:520px;margin-top:20px;">Gated plotted societies in <strong style="color:var(--cream);">Bahadurgarh NCR</strong> (Metro-connected, 28km from CP) & <strong style="color:var(--cream);">Lansdowne Hills</strong> (1706m, Himalayan views). Register now for priority allocation & pricing before public launch.</p>
+      <div style="display:flex;gap:20px;margin-top:32px;flex-wrap:wrap;" class="reveal reveal-d3">
+        <div style="display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:13px;color:rgba(255,255,255,.7);">RERA Compliant</span></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:13px;color:rgba(255,255,255,.7);">Gated & Secure</span></div>
+        <div style="display:flex;align-items:center;gap:8px;"><span style="color:var(--gold);font-size:18px;">✓</span><span style="font-size:13px;color:rgba(255,255,255,.7);">EMI from ₹15K/mo</span></div>
+      </div>
+      <!-- Trust logos -->
+      <div style="margin-top:40px;display:flex;align-items:center;gap:24px;opacity:.6;" class="reveal reveal-d4">
+        <span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);">Trusted by 500+ families</span>
+        <span style="width:1px;height:20px;background:rgba(255,255,255,.2);"></span>
+        <span style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);">Since 2014</span>
+      </div>
+    </div>
+
+    <!-- Right: Lead Form -->
+    <div class="reveal reveal-d2" style="background:rgba(255,255,255,.06);backdrop-filter:blur(20px);border:1px solid rgba(201,168,76,.25);border-radius:24px;padding:clamp(28px,4vw,44px);">
+      <h3 style="font-family:var(--ff-display);font-size:clamp(20px,2.2vw,28px);color:var(--cream);margin-bottom:6px;">Get Pre-Launch Pricing</h3>
+      <p style="font-size:13px;color:rgba(255,255,255,.55);margin-bottom:24px;">Only 120 plots. Prices go up after public launch.</p>
+      <form id="hero-form" style="display:flex;flex-direction:column;gap:14px;">
+        <input type="text" name="name" placeholder="Your Full Name" required style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:12px;color:var(--cream);font-size:14px;outline:none;transition:border-color .3s;">
+        <input type="tel" name="phone" placeholder="WhatsApp Number" required style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:12px;color:var(--cream);font-size:14px;outline:none;transition:border-color .3s;">
+        <select name="project" style="padding:14px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:12px;color:var(--cream);font-size:14px;outline:none;-webkit-appearance:none;">
+          <option value="" style="background:var(--ink);">Which project interests you?</option>
+          <option value="bahadurgarh" style="background:var(--ink);">Bahadurgarh NCR (Metro City)</option>
+          <option value="lansdowne" style="background:var(--ink);">Lansdowne Hills (Holiday Home)</option>
+          <option value="both" style="background:var(--ink);">Both Projects</option>
+        </select>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px;">
+          Get My Price Sheet →
+        </button>
+        <p style="font-size:10px;color:rgba(255,255,255,.35);text-align:center;line-height:1.5;">No spam. We call once to share pricing. That's it.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.5;">
+    <div style="width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);animation:pulse 2s ease-in-out infinite;"></div>
+    <span style="font-family:var(--ff-mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);">Scroll</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SOCIAL PROOF TICKER (light band)
+     ============================================================ -->
+<div style="background:var(--cream);overflow:hidden;padding:16px 0;border-bottom:1px solid var(--cream-mid);">
+  <div id="ticker" style="display:flex;width:max-content;animation:ticker 30s linear infinite;">
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Metro Connected</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">500+ Happy Families</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">RERA Compliant</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Gated Societies</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Pre-Launch Pricing</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">EMI from ₹15K/mo</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Himalayan Views</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Metro Connected</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">500+ Happy Families</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">RERA Compliant</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Gated Societies</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-lt);padding:0 40px;white-space:nowrap;">Pre-Launch Pricing</span>
+    <span style="color:var(--gold);padding:0 8px;">◆</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     TWO PROJECTS — LIGHT SECTION
+     ============================================================ -->
+<section id="projects" class="section-light">
+  <div class="container">
+    <div class="text-center" style="max-width:700px;margin:0 auto 64px;">
+      <span class="eyebrow eyebrow-dark reveal">Two Projects · One Vision</span>
+      <h2 class="heading-lg reveal reveal-d1" style="color:var(--text-dark);">Choose Your <em class="gold-text" style="font-style:italic;">Investment</em></h2>
+      <p class="body-lg reveal reveal-d2" style="color:var(--text-mid);margin-top:16px;">Each project serves a different goal — one for capital growth near Delhi, one for lifestyle + rental yield in the hills. Both at pre-launch pricing.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <!-- BAHADURGARH CARD -->
+      <div class="reveal" style="position:relative;border-radius:24px;overflow:hidden;min-height:580px;display:flex;flex-direction:column;justify-content:flex-end;">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1000&q=80" alt="Bahadurgarh aerial" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-expo);">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,.1) 0%,rgba(10,10,15,.85) 70%);"></div>
+        <div style="position:relative;z-index:10;padding:clamp(28px,4vw,44px);">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,.15);border:1px solid var(--gold-dim);border-radius:999px;padding:5px 14px;font-family:var(--ff-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">
+            <span style="width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s ease-in-out infinite;"></span>
+            Pre-Launch
+          </div>
+          <h3 style="font-family:var(--ff-display);font-size:clamp(28px,3.5vw,40px);color:var(--cream);line-height:1.1;margin-bottom:12px;">Bahadurgarh NCR</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;max-width:360px;margin-bottom:20px;">Metro-connected gated plots, 28km from Connaught Place. The only Tier-2 Haryana city on Delhi Metro.</p>
+          <div style="display:flex;gap:24px;margin-bottom:24px;">
+            <div><span style="font-family:var(--ff-mono);font-size:22px;color:var(--gold);">28</span><span style="font-size:11px;color:var(--gold);">km</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">From Delhi</div></div>
+            <div><span style="font-family:var(--ff-mono);font-size:22px;color:var(--gold);">35</span><span style="font-size:11px;color:var(--gold);">×</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">Growth Since '06</div></div>
+            <div><span style="font-family:var(--ff-mono);font-size:22px;color:var(--gold);">₹15K</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">EMI Starts</div></div>
+          </div>
+          <a href="#register" class="btn btn-gold" style="padding:12px 28px;font-size:11px;">Get Bahadurgarh Pricing →</a>
+        </div>
+      </div>
+
+      <!-- LANSDOWNE CARD -->
+      <div class="reveal reveal-d2" style="position:relative;border-radius:24px;overflow:hidden;min-height:580px;display:flex;flex-direction:column;justify-content:flex-end;">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1000&q=80" alt="Lansdowne hills" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-expo);">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,15,.1) 0%,rgba(10,10,15,.85) 70%);"></div>
+        <div style="position:relative;z-index:10;padding:clamp(28px,4vw,44px);">
+          <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(42,61,46,.3);border:1px solid rgba(74,107,80,.5);border-radius:999px;padding:5px 14px;font-family:var(--ff-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-lt);margin-bottom:16px;">
+            <span style="width:6px;height:6px;background:var(--sage-lt);border-radius:50%;animation:pulse 2s ease-in-out infinite;"></span>
+            Pre-Launch
+          </div>
+          <h3 style="font-family:var(--ff-display);font-size:clamp(28px,3.5vw,40px);color:var(--cream);line-height:1.1;margin-bottom:12px;">Lansdowne Hills</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;max-width:360px;margin-bottom:20px;">Holiday home plots at 1706m. Himalayan panoramas, Airbnb income, cantonment-protected views forever.</p>
+          <div style="display:flex;gap:24px;margin-bottom:24px;">
+            <div><span style="font-family:var(--ff-mono);font-size:22px;color:var(--sage-lt);">1706</span><span style="font-size:11px;color:var(--sage-lt);">m</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">Altitude</div></div>
+            <div><span style="font-family:var(--ff-mono);font-size:22px;color:var(--sage-lt);">4</span><span style="font-size:11px;color:var(--sage-lt);">hr</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">From Delhi</div></div>
+            <div><span style="font-family:var(--ff-mono);font-size:22px;color:var(--sage-lt);">₹4-15K</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;">/Night Airbnb</div></div>
+          </div>
+          <a href="#register" class="btn btn-outline-gold" style="padding:12px 28px;font-size:11px;border-color:var(--sage-lt);color:var(--sage-lt);">Get Lansdowne Pricing →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     USP GRID — DARK SECTION (Project-specific USPs, not city history)
+     ============================================================ -->
+<section id="why-us" class="section-dark">
+  <div class="container">
+    <div class="text-center" style="max-width:700px;margin:0 auto 64px;">
+      <span class="eyebrow eyebrow-gold reveal">Why Estate by HOMEGRAM</span>
+      <h2 class="heading-lg reveal reveal-d1">What Makes Our Plots <em class="gold-text" style="font-style:italic;">Different</em></h2>
+      <p class="body-lg reveal reveal-d2" style="color:rgba(255,255,255,.55);margin-top:16px;">Every plot comes with infrastructure, legality, and a thesis — not just dirt with a boundary marker.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <!-- USP 1 -->
+      <div class="reveal" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:36px 28px;transition:border-color .3s,transform .4s var(--ease-expo);">
+        <div style="width:52px;height:52px;background:var(--gold-glow);border:1px solid var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;">🏗️</div>
+        <h3 style="font-family:var(--ff-display);font-size:20px;color:var(--cream);margin-bottom:10px;">Ready Infrastructure</h3>
+        <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);">Roads, drainage, electricity, boundary walls, parks — all developed before handover. Not raw agricultural land. Build-ready from day one.</p>
+      </div>
+      <!-- USP 2 -->
+      <div class="reveal reveal-d1" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:36px 28px;transition:border-color .3s,transform .4s var(--ease-expo);">
+        <div style="width:52px;height:52px;background:var(--gold-glow);border:1px solid var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;">📋</div>
+        <h3 style="font-family:var(--ff-display);font-size:20px;color:var(--cream);margin-bottom:10px;">Clear Legal Title</h3>
+        <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);">RERA registered. Freehold ownership. Registry at government rates. No litigation, no encumbrance. Your title is clean from day one.</p>
+      </div>
+      <!-- USP 3 -->
+      <div class="reveal reveal-d2" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:36px 28px;transition:border-color .3s,transform .4s var(--ease-expo);">
+        <div style="width:52px;height:52px;background:var(--gold-glow);border:1px solid var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;">🔒</div>
+        <h3 style="font-family:var(--ff-display);font-size:20px;color:var(--cream);margin-bottom:10px;">Gated & Secure</h3>
+        <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);">24/7 security, CCTV surveillance, single-point entry. A community designed for families who value privacy and safety above all.</p>
+      </div>
+      <!-- USP 4 -->
+      <div class="reveal" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:36px 28px;transition:border-color .3s,transform .4s var(--ease-expo);">
+        <div style="width:52px;height:52px;background:var(--gold-glow);border:1px solid var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;">📈</div>
+        <h3 style="font-family:var(--ff-display);font-size:20px;color:var(--cream);margin-bottom:10px;">Proven Appreciation</h3>
+        <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);">Bahadurgarh has seen 35× land appreciation since 2006. Lansdowne's supply-constrained market compounds yearly. Early entry = maximum upside.</p>
+      </div>
+      <!-- USP 5 -->
+      <div class="reveal reveal-d1" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:36px 28px;transition:border-color .3s,transform .4s var(--ease-expo);">
+        <div style="width:52px;height:52px;background:var(--gold-glow);border:1px solid var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;">💳</div>
+        <h3 style="font-family:var(--ff-display);font-size:20px;color:var(--cream);margin-bottom:10px;">Flexible Payment</h3>
+        <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);">EMI plans starting ₹15,000/month. Zero-interest construction-linked plans. Bank loan assistance included. Invest without liquidity pressure.</p>
+      </div>
+      <!-- USP 6 -->
+      <div class="reveal reveal-d2" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:36px 28px;transition:border-color .3s,transform .4s var(--ease-expo);">
+        <div style="width:52px;height:52px;background:var(--gold-glow);border:1px solid var(--gold-dim);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;">🏡</div>
+        <h3 style="font-family:var(--ff-display);font-size:20px;color:var(--cream);margin-bottom:10px;">Build When You Want</h3>
+        <p style="font-size:13px;line-height:1.7;color:rgba(255,255,255,.5);">Buy the plot now at pre-launch price. Build your home when ready — no construction deadline pressure. Your land appreciates either way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BAHADURGARH DEEP DIVE — LIGHT
+     ============================================================ -->
+<section class="section-cream">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;">
+      <div>
+        <span class="eyebrow eyebrow-dark reveal">Bahadurgarh NCR</span>
+        <h2 class="heading-lg reveal reveal-d1" style="color:var(--text-dark);">Delhi Metro at Your <em class="gold-text" style="font-style:italic;">Doorstep</em></h2>
+        <div class="gold-line reveal reveal-d2"></div>
+        <div class="reveal reveal-d2" style="display:flex;flex-direction:column;gap:20px;margin-top:24px;">
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--gold);font-size:20px;flex-shrink:0;">🚇</span>
+            <div><strong style="font-size:14px;color:var(--text-dark);">Direct Metro Access</strong><p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-top:4px;">Green Line terminus — 28 minutes to central Delhi. Only Tier-2 Haryana city with this advantage.</p></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--gold);font-size:20px;flex-shrink:0;">🛣️</span>
+            <div><strong style="font-size:14px;color:var(--text-dark);">KMP Expressway Hub</strong><p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-top:4px;">Connected to entire NCR logistics network. Warehousing boom = employment = residential demand surge.</p></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--gold);font-size:20px;flex-shrink:0;">💰</span>
+            <div><strong style="font-size:14px;color:var(--text-dark);">60-80% Below NCR Average</strong><p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-top:4px;">Still priced at a massive discount to Dwarka, Gurugram, and Faridabad — despite identical Metro connectivity.</p></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--gold);font-size:20px;flex-shrink:0;">🏘️</span>
+            <div><strong style="font-size:14px;color:var(--text-dark);">Gated Plotted Society</strong><p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-top:4px;">Internal roads, parks, drainage, boundary walls, community center — a complete township, not empty plots.</p></div>
+          </div>
+        </div>
+        <a href="#register" class="btn btn-dark reveal reveal-d3" style="margin-top:32px;">Get Bahadurgarh Price Sheet →</a>
+      </div>
+      <div class="reveal reveal-d2" style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Modern residential development" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:24px;left:24px;right:24px;background:rgba(10,10,15,.85);backdrop-filter:blur(12px);border-radius:16px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;">
+          <div><span style="font-family:var(--ff-mono);font-size:24px;color:var(--gold);">35×</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;">Growth Since 2006</div></div>
+          <div style="width:1px;height:36px;background:rgba(255,255,255,.1);"></div>
+          <div><span style="font-family:var(--ff-mono);font-size:24px;color:var(--gold);">28</span><span style="font-size:12px;color:var(--gold);">min</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;">Metro to Delhi</div></div>
+          <div style="width:1px;height:36px;background:rgba(255,255,255,.1);"></div>
+          <div><span style="font-family:var(--ff-mono);font-size:24px;color:var(--gold);">₹15K</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;">EMI/Month</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     LANSDOWNE DEEP DIVE — DARK
+     ============================================================ -->
+<section class="section-dark" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;opacity:.15;">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=60" alt="" style="width:100%;height:100%;object-fit:cover;">
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,var(--ink) 0%,rgba(10,10,15,.9) 50%,var(--ink) 100%);"></div>
+  <div class="container" style="position:relative;z-index:10;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;">
+      <div class="reveal" style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/5;">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Himalayan mountain view" style="width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;bottom:24px;left:24px;right:24px;background:rgba(10,10,15,.85);backdrop-filter:blur(12px);border-radius:16px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;">
+          <div><span style="font-family:var(--ff-mono);font-size:24px;color:var(--sage-lt);">1706</span><span style="font-size:12px;color:var(--sage-lt);">m</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;">Altitude</div></div>
+          <div style="width:1px;height:36px;background:rgba(255,255,255,.1);"></div>
+          <div><span style="font-family:var(--ff-mono);font-size:24px;color:var(--sage-lt);">₹4-15K</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;">/Night Airbnb</div></div>
+          <div style="width:1px;height:36px;background:rgba(255,255,255,.1);"></div>
+          <div><span style="font-family:var(--ff-mono);font-size:24px;color:var(--sage-lt);">4</span><span style="font-size:12px;color:var(--sage-lt);">hr</span><div style="font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.12em;text-transform:uppercase;margin-top:4px;">From Delhi</div></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow eyebrow-gold reveal">Lansdowne Hills · Uttarakhand</span>
+        <h2 class="heading-lg reveal reveal-d1">Your Himalayan <em class="gold-text" style="font-style:italic;">Escape</em> That Earns</h2>
+        <div class="gold-line reveal reveal-d2"></div>
+        <div class="reveal reveal-d2" style="display:flex;flex-direction:column;gap:20px;margin-top:24px;">
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--sage-lt);font-size:20px;flex-shrink:0;">🏔️</span>
+            <div><strong style="font-size:14px;color:var(--cream);">Protected Views Forever</strong><p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-top:4px;">Cantonment law permanently bans high-rise development. Your Himalayan panorama is legally guaranteed. No building will ever block it.</p></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--sage-lt);font-size:20px;flex-shrink:0;">💰</span>
+            <div><strong style="font-size:14px;color:var(--cream);">Airbnb Rental Income</strong><p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-top:4px;">Properties command ₹4,000–₹15,000/night. Corporate retreats, families, weekend warriors — year-round demand with limited supply.</p></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--sage-lt);font-size:20px;flex-shrink:0;">📈</span>
+            <div><strong style="font-size:14px;color:var(--cream);">Supply-Constrained Appreciation</strong><p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-top:4px;">Cantonment limits new supply. Tourism demand rising. The math is simple: fixed supply + growing demand = compounding values.</p></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;">
+            <span style="color:var(--sage-lt);font-size:20px;flex-shrink:0;">🏡</span>
+            <div><strong style="font-size:14px;color:var(--cream);">A Real Second Home</strong><p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-top:4px;">4-hour drive from Delhi NCR. No flights, no airports. A genuine family escape you'll actually use every month — not just dream about.</p></div>
+          </div>
+        </div>
+        <a href="#register" class="btn btn-outline-gold reveal reveal-d3" style="margin-top:32px;">Get Lansdowne Price Sheet →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     YIELD CALCULATOR — LIGHT SECTION
+     ============================================================ -->
+<section id="calculator" class="section-light">
+  <div class="container">
+    <div class="text-center" style="max-width:640px;margin:0 auto 48px;">
+      <span class="eyebrow eyebrow-dark reveal">Lansdowne Rental Income</span>
+      <h2 class="heading-lg reveal reveal-d1" style="color:var(--text-dark);">What Could Your Plot <em class="gold-text" style="font-style:italic;">Earn?</em></h2>
+      <p class="body-lg reveal reveal-d2" style="color:var(--text-mid);margin-top:12px;">Adjust the sliders to estimate Airbnb rental income from your Lansdowne holiday home.</p>
+    </div>
+    <div class="reveal reveal-d2" style="max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--cream-mid);border-radius:24px;padding:clamp(32px,5vw,52px);box-shadow:0 20px 60px rgba(0,0,0,.06);">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <label style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-lt);">Weekends Rented / Year</label>
+        <span id="calc-w-val" style="font-family:var(--ff-mono);font-size:16px;color:var(--gold);font-weight:700;">26</span>
+      </div>
+      <input type="range" id="calc-w" min="4" max="52" value="26" style="width:100%;height:6px;-webkit-appearance:none;appearance:none;background:var(--cream-mid);border-radius:6px;outline:none;margin-bottom:28px;cursor:pointer;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <label style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-lt);">Avg Nightly Rate (₹)</label>
+        <span id="calc-r-val" style="font-family:var(--ff-mono);font-size:16px;color:var(--gold);font-weight:700;">8,000</span>
+      </div>
+      <input type="range" id="calc-r" min="3000" max="18000" value="8000" step="500" style="width:100%;height:6px;-webkit-appearance:none;appearance:none;background:var(--cream-mid);border-radius:6px;outline:none;margin-bottom:32px;cursor:pointer;">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-top:28px;border-top:1px solid var(--cream-mid);">
+        <div style="text-align:center;"><div id="calc-nights" style="font-family:var(--ff-mono);font-size:clamp(22px,3vw,32px);color:var(--gold);font-weight:700;">52</div><div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-lt);margin-top:4px;">Nights/Year</div></div>
+        <div style="text-align:center;"><div id="calc-gross" style="font-family:var(--ff-mono);font-size:clamp(22px,3vw,32px);color:var(--gold);font-weight:700;">₹4.16L</div><div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-lt);margin-top:4px;">Gross Income</div></div>
+        <div style="text-align:center;"><div id="calc-net" style="font-family:var(--ff-mono);font-size:clamp(22px,3vw,32px);color:var(--gold);font-weight:700;">₹2.91L</div><div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-lt);margin-top:4px;">Net (After 30% Costs)</div></div>
+      </div>
+      <p style="font-size:10px;color:var(--text-lt);text-align:center;margin-top:20px;line-height:1.5;">Indicative only. Based on current Lansdowne Airbnb market rates. Actual results vary.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TESTIMONIALS / SOCIAL PROOF — DARK
+     ============================================================ -->
+<section class="section-dark">
+  <div class="container">
+    <div class="text-center" style="max-width:640px;margin:0 auto 56px;">
+      <span class="eyebrow eyebrow-gold reveal">What Our Buyers Say</span>
+      <h2 class="heading-lg reveal reveal-d1">Real Investors. <em class="gold-text" style="font-style:italic;">Real Results.</em></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div class="reveal" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:32px 28px;">
+        <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--gold);font-size:16px;">★★★★★</div>
+        <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;font-style:italic;margin-bottom:20px;">"Bought a plot in 2019 via HomeGram. Already seen 3× appreciation. The team handled everything — from legal to registry. Zero hassle."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;background:var(--gold-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--gold);font-weight:700;">R</div>
+          <div><div style="font-size:13px;color:var(--cream);font-weight:500;">Rajesh Kapoor</div><div style="font-size:11px;color:var(--text-lt);">IT Professional, Gurugram</div></div>
+        </div>
+      </div>
+      <div class="reveal reveal-d1" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:32px 28px;">
+        <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--gold);font-size:16px;">★★★★★</div>
+        <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;font-style:italic;margin-bottom:20px;">"We wanted a hill home under ₹50L. Lansdowne through HOMEGRAM was perfect — views, income potential, and no legal drama. Can't wait to build."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;background:var(--gold-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--gold);font-weight:700;">P</div>
+          <div><div style="font-size:13px;color:var(--cream);font-weight:500;">Priya & Amit Sharma</div><div style="font-size:11px;color:var(--text-lt);">Couple, Noida</div></div>
+        </div>
+      </div>
+      <div class="reveal reveal-d2" style="background:var(--ink-c);border:1px solid rgba(201,168,76,.1);border-radius:20px;padding:32px 28px;">
+        <div style="display:flex;gap:4px;margin-bottom:16px;color:var(--gold);font-size:16px;">★★★★★</div>
+        <p style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;font-style:italic;margin-bottom:20px;">"My Bahadurgarh investment was the best financial decision of 2020. Metro connectivity changed everything. The growth still has legs."</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div style="width:40px;height:40px;background:var(--gold-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--gold);font-weight:700;">V</div>
+          <div><div style="font-size:13px;color:var(--cream);font-weight:500;">Vikram Singh</div><div style="font-size:11px;color:var(--text-lt);">Business Owner, Delhi</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMPARISON TABLE — CREAM SECTION
+     ============================================================ -->
+<section class="section-cream">
+  <div class="container">
+    <div class="text-center" style="max-width:700px;margin:0 auto 56px;">
+      <span class="eyebrow eyebrow-dark reveal">Compare & Decide</span>
+      <h2 class="heading-lg reveal reveal-d1" style="color:var(--text-dark);">Why Tier-2 Beats <em class="gold-text" style="font-style:italic;">Tier-1</em> Right Now</h2>
+    </div>
+    <div class="reveal reveal-d2" style="background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.05);border:1px solid var(--cream-mid);">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead>
+          <tr style="background:var(--ink);color:var(--cream);">
+            <th style="padding:18px 24px;text-align:left;font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;">Factor</th>
+            <th style="padding:18px 24px;text-align:center;font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;">Gurugram / Noida</th>
+            <th style="padding:18px 24px;text-align:center;font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;background:rgba(201,168,76,.15);color:var(--gold);">Our Projects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--cream-mid);">
+            <td style="padding:16px 24px;color:var(--text-mid);">Entry Price (per sq yd)</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text-lt);">₹80,000–₹2,00,000</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--gold);font-weight:600;">₹3,500–₹12,000</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--cream-mid);">
+            <td style="padding:16px 24px;color:var(--text-mid);">Metro Connectivity</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text-lt);">Yes (saturated)</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--gold);font-weight:600;">Yes (early stage)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--cream-mid);">
+            <td style="padding:16px 24px;color:var(--text-mid);">Growth Potential</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text-lt);">5–8% annual</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--gold);font-weight:600;">20–40% annual (early arc)</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--cream-mid);">
+            <td style="padding:16px 24px;color:var(--text-mid);">Plot Availability</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text-lt);">Almost none</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--gold);font-weight:600;">Available (pre-launch)</td>
+          </tr>
+          <tr>
+            <td style="padding:16px 24px;color:var(--text-mid);">Overcrowding Risk</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--text-lt);">High</td>
+            <td style="padding:16px 24px;text-align:center;color:var(--gold);font-weight:600;">None (gated, controlled)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center reveal reveal-d3" style="margin-top:40px;">
+      <a href="#register" class="btn btn-gold">See Our Pricing — Register Now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ — DARK
+     ============================================================ -->
+<section class="section-dark">
+  <div class="container" style="max-width:800px;">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="eyebrow eyebrow-gold reveal">Common Questions</span>
+      <h2 class="heading-lg reveal reveal-d1">Everything You Need <em class="gold-text" style="font-style:italic;">to Know</em></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px;" class="reveal reveal-d2">
+      <details style="background:var(--ink-c);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:0;">
+        <summary style="padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--cream);list-style:none;display:flex;justify-content:space-between;align-items:center;">Is the land freehold? Can I get a bank loan?<span style="color:var(--gold);font-size:20px;transition:transform .3s;">+</span></summary>
+        <div style="padding:0 24px 20px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;">Yes. All plots are freehold ownership with clean titles. Registry happens at government sub-registrar rates. Bank loans are available — we assist with documentation for all major banks including SBI, HDFC, and ICICI.</div>
+      </details>
+      <details style="background:var(--ink-c);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:0;">
+        <summary style="padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--cream);list-style:none;display:flex;justify-content:space-between;align-items:center;">What's included with the plot?<span style="color:var(--gold);font-size:20px;transition:transform .3s;">+</span></summary>
+        <div style="padding:0 24px 20px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;">Every plot comes within a gated society with internal roads (20–40 ft), underground drainage, electricity connections, boundary walls, landscaped parks, community center, and 24/7 security with CCTV. Not raw land — a complete residential environment.</div>
+      </details>
+      <details style="background:var(--ink-c);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:0;">
+        <summary style="padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--cream);list-style:none;display:flex;justify-content:space-between;align-items:center;">What are the payment options?<span style="color:var(--gold);font-size:20px;transition:transform .3s;">+</span></summary>
+        <div style="padding:0 24px 20px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;">Flexible plans: (1) Full payment with discount, (2) Construction-linked plan (pay in stages as development progresses), (3) EMI via bank loan starting from ₹15,000/month. No penalty for early closure.</div>
+      </details>
+      <details style="background:var(--ink-c);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:0;">
+        <summary style="padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--cream);list-style:none;display:flex;justify-content:space-between;align-items:center;">When do I need to build a house?<span style="color:var(--gold);font-size:20px;transition:transform .3s;">+</span></summary>
+        <div style="padding:0 24px 20px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;">There's no construction deadline. Buy the plot now at pre-launch prices, and build whenever suits your timeline — 1 year, 5 years, or 10 years from now. Your land appreciates regardless of whether you build.</div>
+      </details>
+      <details style="background:var(--ink-c);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:0;">
+        <summary style="padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--cream);list-style:none;display:flex;justify-content:space-between;align-items:center;">Is this RERA registered?<span style="color:var(--gold);font-size:20px;transition:transform .3s;">+</span></summary>
+        <div style="padding:0 24px 20px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;">Yes. Our projects are RERA-compliant (registration in progress for pre-launch phase). RERA number will be shared at booking. All documentation is transparent and legally verified before any handover.</div>
+      </details>
+      <details style="background:var(--ink-c);border:1px solid rgba(201,168,76,.08);border-radius:14px;padding:0;">
+        <summary style="padding:20px 24px;cursor:pointer;font-size:15px;font-weight:500;color:var(--cream);list-style:none;display:flex;justify-content:space-between;align-items:center;">Can I visit the site before booking?<span style="color:var(--gold);font-size:20px;transition:transform .3s;">+</span></summary>
+        <div style="padding:0 24px 20px;font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;">Absolutely. We arrange free site visits every weekend for Bahadurgarh (pickup from Delhi Metro) and monthly group trips to Lansdowne. Register your interest and we'll schedule a visit within 7 days.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FINAL CTA — GOLD SECTION + FORM
+     ============================================================ -->
+<section id="register" class="section-gold">
+  <div class="container text-center">
+    <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(10,10,15,.5);display:block;margin-bottom:16px;" class="reveal">Limited Plots · Pre-Launch Pricing</span>
+    <h2 class="heading-lg reveal reveal-d1" style="color:var(--ink);max-width:700px;margin:0 auto;">Prices Go Up After Public Launch. <em style="font-style:italic;">Get Yours Now.</em></h2>
+    <p style="font-size:clamp(15px,1.2vw,17px);color:rgba(10,10,15,.6);max-width:520px;margin:16px auto 0;line-height:1.7;" class="reveal reveal-d2">Register for priority allocation. Our team will send you the complete pricing brochure within 24 hours. No obligation.</p>
+    <form id="bottom-form" class="reveal reveal-d3" style="margin-top:36px;display:flex;gap:12px;max-width:680px;margin-left:auto;margin-right:auto;flex-wrap:wrap;justify-content:center;">
+      <input type="text" name="name" placeholder="Your Name" required style="flex:1;min-width:160px;padding:16px 20px;background:rgba(255,255,255,.9);border:2px solid transparent;border-radius:60px;font-size:14px;color:var(--ink);outline:none;transition:border-color .3s;">
+      <input type="tel" name="phone" placeholder="WhatsApp Number" required style="flex:1;min-width:160px;padding:16px 20px;background:rgba(255,255,255,.9);border:2px solid transparent;border-radius:60px;font-size:14px;color:var(--ink);outline:none;transition:border-color .3s;">
+      <select name="project" style="flex:1;min-width:180px;padding:16px 20px;background:rgba(255,255,255,.9);border:2px solid transparent;border-radius:60px;font-size:14px;color:var(--ink);outline:none;-webkit-appearance:none;">
+        <option value="">Which project?</option>
+        <option value="bahadurgarh">Bahadurgarh NCR</option>
+        <option value="lansdowne">Lansdowne Hills</option>
+        <option value="both">Both</option>
+      </select>
+      <button type="submit" class="btn btn-dark" style="flex-shrink:0;">Get My Price Sheet →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARENT BRAND BAR
+     ============================================================ -->
+<div style="background:var(--ink-b);padding:40px 0;border-top:1px solid rgba(201,168,76,.1);">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+    <div>
+      <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-lt);margin-bottom:6px;">Part of</div>
+      <div style="font-family:var(--ff-display);font-style:italic;font-size:clamp(20px,2.2vw,28px);color:var(--cream);">HomeGram Real Estate</div>
+      <p style="font-size:13px;color:rgba(255,255,255,.4);margin-top:6px;max-width:400px;line-height:1.6;">Gurugram's boutique real estate advisory since 2014. 500+ families served across NCR and the hills.</p>
+    </div>
+    <a href="https://aheadads.co.in/homegramv4/" target="_blank" rel="noopener" class="btn btn-outline-gold" style="padding:12px 28px;font-size:11px;">Visit HomeGram →</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer style="background:var(--ink);padding:clamp(48px,6vw,80px) 0 28px;border-top:1px solid rgba(201,168,76,.08);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px;margin-bottom:48px;">
+      <div>
+        <div style="font-family:var(--ff-display);font-style:italic;font-size:28px;color:var(--gold);margin-bottom:4px;">Estate</div>
+        <div style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-lt);">by HOMEGRAM</div>
+        <p style="font-size:13px;color:var(--text-lt);line-height:1.7;margin-top:14px;max-width:260px;">Premium plotted developments in India's highest-growth Tier 2 cities. Pre-launch pricing available now.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;">Projects</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#projects" style="font-size:13px;color:var(--text-lt);transition:color .25s;">Bahadurgarh, Haryana</a>
+          <a href="#projects" style="font-size:13px;color:var(--text-lt);transition:color .25s;">Lansdowne, Uttarakhand</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;">Quick Links</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#why-us" style="font-size:13px;color:var(--text-lt);transition:color .25s;">Why Us</a>
+          <a href="#calculator" style="font-size:13px;color:var(--text-lt);transition:color .25s;">Returns Calculator</a>
+          <a href="#register" style="font-size:13px;color:var(--text-lt);transition:color .25s;">Register Interest</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--gold);">📞</span><a href="tel:+919654803560" style="font-size:13px;color:var(--text-lt);">+91 96548 03560</a></div>
+          <div style="display:flex;gap:10px;align-items:center;"><span style="color:var(--gold);">✉️</span><a href="mailto:sharma.manish53@gmail.com" style="font-size:13px;color:var(--text-lt);">sharma.manish53@gmail.com</a></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--gold);">📍</span><span style="font-size:13px;color:var(--text-lt);line-height:1.55;">M3M Prive, GF/LG 07,<br>Sector 73, Gurugram 122004</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <p style="font-size:11px;color:rgba(255,255,255,.3);">© 2025 Estate by HOMEGRAM. All rights reserved. RERA registration pending.</p>
+      <div style="display:flex;gap:12px;">
+        <a href="tel:+919654803560" style="width:36px;height:36px;border:1px solid rgba(201,168,76,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,background .3s;" title="Call">📞</a>
+        <a href="https://wa.me/919654803560" target="_blank" style="width:36px;height:36px;border:1px solid rgba(201,168,76,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,background .3s;" title="WhatsApp">💬</a>
+        <a href="mailto:sharma.manish53@gmail.com" style="width:36px;height:36px;border:1px solid rgba(201,168,76,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;transition:border-color .3s,background .3s;" title="Email">✉️</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING WHATSAPP BUTTON
+     ============================================================ -->
+<a href="https://wa.me/919654803560?text=Hi%2C%20I%27m%20interested%20in%20Estate%20by%20HOMEGRAM%20plots.%20Please%20share%20pricing." target="_blank" id="wa-float" style="position:fixed;bottom:28px;right:28px;z-index:9999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s var(--ease-out),box-shadow .3s;animation:waFloat 3s ease-in-out infinite;">
+  💬
+</a>
+
+<!-- ============================================================
+     STICKY MOBILE CTA BAR
+     ============================================================ -->
+<div id="mobile-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:8999;background:var(--ink);border-top:1px solid var(--gold-dim);padding:12px 16px;gap:10px;align-items:center;justify-content:center;">
+  <a href="tel:+919654803560" style="flex:1;text-align:center;padding:12px;background:var(--gold);color:var(--ink);border-radius:10px;font-size:13px;font-weight:600;">📞 Call Now</a>
+  <a href="https://wa.me/919654803560" target="_blank" style="flex:1;text-align:center;padding:12px;background:#25D366;color:#fff;border-radius:10px;font-size:13px;font-weight:600;">💬 WhatsApp</a>
+  <a href="#register" style="flex:1;text-align:center;padding:12px;border:1px solid var(--gold);color:var(--gold);border-radius:10px;font-size:13px;font-weight:600;">Get Price</a>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* NAV SCROLL */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    nav.style.background = 'rgba(10,10,15,.92)';
+    nav.style.backdropFilter = 'blur(20px)';
+    nav.style.borderColor = 'rgba(201,168,76,.12)';
+  } else {
+    nav.style.background = 'transparent';
+    nav.style.backdropFilter = 'none';
+    nav.style.borderColor = 'transparent';
+  }
+}, { passive: true });
+
+/* SCROLL REVEAL */
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!window.IntersectionObserver) { els.forEach(el => el.classList.add('visible')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
+}
+initReveal();
+
+/* TICKER ANIMATION */
+const style = document.createElement('style');
+style.textContent = `
+@keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+@keyframes waFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);cursor:pointer;box-shadow:0 0 10px rgba(201,168,76,.4)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);cursor:pointer;border:none}
+details[open] summary span:last-child{transform:rotate(45deg)}
+@media(max-width:900px){
+  #nav-links{display:none !important}
+  #hamburger{display:flex !important}
+  #hero .container{grid-template-columns:1fr !important}
+  #projects > div > div:nth-child(2){grid-template-columns:1fr !important}
+  #why-us > div > div:nth-child(2){grid-template-columns:1fr !important}
+  .section-cream .container > div{grid-template-columns:1fr !important}
+  .section-dark > .container > div:first-child{grid-template-columns:1fr !important}
+  footer .container > div:first-child{grid-template-columns:1fr !important}
+  #mobile-cta{display:flex !important}
+  #wa-float{bottom:90px}
+}
+@media(max-width:600px){
+  .section-dark > .container > div[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr !important}
+  table{font-size:12px}
+}
+`;
+document.head.appendChild(style);
+
+/* CALCULATOR */
+function updateCalc() {
+  const w = document.getElementById('calc-w');
+  const r = document.getElementById('calc-r');
+  if (!w || !r) return;
+  const weekends = parseInt(w.value);
+  const rate = parseInt(r.value);
+  const nights = weekends * 2;
+  const gross = nights * rate;
+  const net = Math.round(gross * 0.7);
+  document.getElementById('calc-w-val').textContent = weekends;
+  document.getElementById('calc-r-val').textContent = rate.toLocaleString('en-IN');
+  document.getElementById('calc-nights').textContent = nights;
+  document.getElementById('calc-gross').textContent = gross >= 100000 ? '₹' + (gross/100000).toFixed(2) + 'L' : '₹' + gross.toLocaleString('en-IN');
+  document.getElementById('calc-net').textContent = net >= 100000 ? '₹' + (net/100000).toFixed(2) + 'L' : '₹' + net.toLocaleString('en-IN');
+}
+document.getElementById('calc-w')?.addEventListener('input', updateCalc);
+document.getElementById('calc-r')?.addEventListener('input', updateCalc);
+updateCalc();
+
+/* FORM HANDLING */
+function handleForm(id) {
+  const form = document.getElementById(id);
+  if (!form) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = new FormData(form);
+    const name = d.get('name') || '';
+    const phone = d.get('phone') || '';
+    const project = d.get('project') || 'Not specified';
+    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nProject: ${project}\n\nSent from Estate by HOMEGRAM website`);
+    const subject = encodeURIComponent(`Estate Enquiry – ${name || phone}`);
+    window.location.href = `mailto:sharma.manish53@gmail.com?subject=${subject}&body=${body}`;
+    // Also open WhatsApp as backup
+    setTimeout(() => {
+      window.open(`https://wa.me/919654803560?text=${encodeURIComponent(`Hi, I'm ${name}. Interested in ${project}. My number: ${phone}. Please share pricing.`)}`, '_blank');
+    }, 1000);
+    form.reset();
+    alert('Thank you! We will share pricing within 24 hours.');
+  });
+}
+handleForm('hero-form');
+handleForm('bottom-form');
+
+/* HAMBURGER */
+document.getElementById('hamburger')?.addEventListener('click', function() {
+  // Simple: scroll to register on mobile
+  document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+});
+
+/* SMOOTH SCROLL FOR ANCHOR LINKS */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
