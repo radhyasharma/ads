@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahadurgarh NCR — Estate by HOMEGRAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#FDFBF7;--ink:#0A0A0F;--gold:#C9A84C;--gold-light:#E8D48B;--gold-dark:#A68A3A;--gray-100:#F5F3EE;--gray-200:#E8E4DC;--gray-600:#6B6860;--gray-700:#3D3B37;--font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button,input,select,textarea{font-family:var(--font-body);border:none;outline:none}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 0;transition:all .4s ease}
+.nav.scrolled{background:rgba(10,10,15,.85);backdrop-filter:blur(20px);padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 24px}
+.logo{display:flex;flex-direction:column;align-items:flex-start}
+.logo-main{font-family:var(--font-display);font-style:italic;font-size:1.75rem;color:#fff;font-weight:700}
+.logo-sub{font-family:var(--font-mono);font-size:.6rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-top:-2px}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:400;transition:color .3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--ink);padding:10px 24px;border-radius:4px;font-weight:600;font-size:.85rem;transition:all .3s}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:#fff;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--ink);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.active{display:flex}
+.mobile-menu a{color:#fff;font-size:1.4rem;font-family:var(--font-display)}
+.mobile-close{position:absolute;top:24px;right:24px;color:#fff;font-size:1.5rem;cursor:pointer}
+
+.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.3) 0%,rgba(10,10,15,.75) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px}
+.hero-content h1{font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;margin-bottom:16px}
+.hero-content p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:8px}
+.breadcrumb{font-family:var(--font-mono);font-size:.75rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
+.breadcrumb a{color:rgba(255,255,255,.6)}
+.breadcrumb a:hover{color:var(--gold)}
+
+.stats-bar{background:var(--ink);padding:40px 0}
+.stats-bar-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-item .stat-number{font-family:var(--font-mono);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--gold)}
+.stat-item .stat-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
+
+.section{padding:100px 0}
+.section-dark{background:var(--ink);color:#fff}
+.section-light{background:var(--cream)}
+.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.section-subtitle{color:var(--gray-600);font-size:1.05rem;max-width:600px}
+.section-dark .section-subtitle{color:rgba(255,255,255,.6)}
+
+.usp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:60px}
+.usp-card{padding:48px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;transition:all .4s}
+.usp-card:hover{background:rgba(255,255,255,.06);border-color:var(--gold);transform:translateY(-4px)}
+.usp-card i{font-size:2.2rem;color:var(--gold);margin-bottom:20px;display:block}
+.usp-card h4{font-size:1.2rem;color:#fff;margin-bottom:10px}
+.usp-card p{color:rgba(255,255,255,.65);font-size:.95rem;line-height:1.7}
+
+.infra-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.infra-card{padding:32px;background:var(--gray-100);border-radius:12px;text-align:center;transition:all .4s}
+.infra-card:hover{background:#fff;box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
+.infra-card i{font-size:2rem;color:var(--gold);margin-bottom:16px;display:block}
+.infra-card h4{font-size:1rem;margin-bottom:6px}
+.infra-card p{color:var(--gray-600);font-size:.85rem}
+
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:60px;align-items:start}
+.location-list{list-style:none}
+.location-list li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:16px;color:rgba(255,255,255,.8);font-size:.95rem}
+.location-list li i{color:var(--gold);font-size:1.2rem;flex-shrink:0}
+.location-highlight{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:40px;text-align:center}
+.location-highlight h3{color:var(--gold);margin-bottom:12px;font-size:1.4rem}
+.location-highlight p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7}
+
+.cta-section{background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));padding:80px 0}
+.cta-section h2{color:var(--ink);font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:12px}
+.cta-section p{color:var(--gray-700);margin-bottom:32px}
+.cta-form{display:flex;gap:12px;flex-wrap:wrap;max-width:700px}
+.cta-form input{padding:14px 20px;border-radius:4px;background:#fff;font-size:.9rem;flex:1;min-width:200px}
+.cta-form button{background:var(--ink);color:#fff;padding:14px 32px;border-radius:4px;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap}
+.cta-form button:hover{background:#1a1a24;transform:translateY(-1px)}
+
+.footer{background:var(--ink);color:rgba(255,255,255,.7);padding:80px 0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px}
+.footer-brand .logo{margin-bottom:16px}
+.footer-brand p{font-size:.9rem;line-height:1.7}
+.footer h4{color:#fff;font-size:.85rem;font-family:var(--font-mono);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:10px}
+.footer ul a{color:rgba(255,255,255,.6);font-size:.9rem;transition:color .3s}
+.footer ul a:hover{color:var(--gold)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:.9rem}
+.footer-contact-item i{color:var(--gold);margin-top:3px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
+
+.whatsapp-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:900;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.whatsapp-float i{color:#fff;font-size:1.5rem}
+
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+@media(max-width:1024px){
+.stats-bar-inner{grid-template-columns:repeat(2,1fr)}
+.usp-grid,.location-grid{grid-template-columns:1fr}
+.infra-grid{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:flex}
+.infra-grid{grid-template-columns:1fr}
+.stats-bar-inner{grid-template-columns:repeat(2,1fr);gap:20px}
+.cta-form{flex-direction:column}
+.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+
+<!-- NAVIGATION -->
+<nav class="nav">
+<div class="nav-inner">
+<a href="index.html" class="logo">
+<span class="logo-main">Estate</span>
+<span class="logo-sub">by HOMEGRAM</span>
+</a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="bahadurgarh.html">Bahadurgarh</a>
+<a href="lansdowne.html">Lansdowne</a>
+<a href="contact.html" class="nav-cta">Enquire Now</a>
+</div>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-close" onclick="toggleMenu()"><i class="hgi-stroke hgi-cancel-01"></i></div>
+<a href="index.html" onclick="toggleMenu()">Home</a>
+<a href="bahadurgarh.html" onclick="toggleMenu()">Bahadurgarh</a>
+<a href="lansdowne.html" onclick="toggleMenu()">Lansdowne</a>
+<a href="contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<img class="hero-bg" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90" alt="Bahadurgarh NCR">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="breadcrumb"><a href="index.html">Home</a> / Bahadurgarh NCR</div>
+<h1 style="margin-top:16px">Bahadurgarh NCR</h1>
+<p>Delhi's next growth frontier. Metro-connected, expressway-linked, exponentially appreciating.</p>
+</div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+<div class="container">
+<div class="stats-bar-inner">
+<div class="stat-item">
+<div class="stat-number">28km</div>
+<div class="stat-label">From Delhi CP</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">35x</div>
+<div class="stat-label">Growth Since 2006</div>
+</div>
+<div class="stat-item">
+<div class="stat-number"><i class="hgi-stroke hgi-metro" style="font-size:1.8rem"></i></div>
+<div class="stat-label">Metro Connected</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">6L+</div>
+<div class="stat-label">Population</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- USPs -->
+<section class="section section-dark">
+<div class="container">
+<h2 class="section-title reveal">Why Bahadurgarh</h2>
+<p class="section-subtitle reveal">The only Tier-2 city in Haryana with direct Delhi Metro connectivity.</p>
+<div class="usp-grid reveal">
+<div class="usp-card">
+<i class="hgi-stroke hgi-metro"></i>
+<h4>Delhi Metro Green Line</h4>
+<p>Bahadurgarh is the terminus of the Delhi Metro Green Line. Direct connectivity to Inderlok, CP, and across Delhi NCR. Only Tier-2 Haryana city with this advantage.</p>
+</div>
+<div class="usp-card">
+<i class="hgi-stroke hgi-road-01"></i>
+<h4>KMP Expressway Access</h4>
+<p>Kundli-Manesar-Palwal Expressway passes through Bahadurgarh, connecting it to the entire NCR industrial belt and enabling massive commercial growth.</p>
+</div>
+<div class="usp-card">
+<i class="hgi-stroke hgi-chart-increase"></i>
+<h4>60-80% Below NCR Rates</h4>
+<p>Land prices are still 60-80% lower than comparable NCR locations like Dwarka, Gurugram, and Noida. Early entry means maximum appreciation potential.</p>
+</div>
+<div class="usp-card">
+<i class="hgi-stroke hgi-home-01"></i>
+<h4>Gated Township</h4>
+<p>Our project is a fully gated plotted society with boundary walls, 24/7 security, internal roads, drainage, and landscaped parks. Ready infrastructure from day one.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- INFRASTRUCTURE -->
+<section class="section section-light">
+<div class="container">
+<h2 class="section-title reveal">What's Included</h2>
+<p class="section-subtitle reveal">Complete infrastructure delivered before possession. No hidden development costs.</p>
+<div class="infra-grid reveal">
+<div class="infra-card">
+<i class="hgi-stroke hgi-road-01"></i>
+<h4>Internal Roads</h4>
+<p>30-40 ft wide paved internal roads with proper drainage planning</p>
+</div>
+<div class="infra-card">
+<i class="hgi-stroke hgi-sun-03"></i>
+<h4>Electricity</h4>
+<p>Underground electrical connections with individual meters for each plot</p>
+</div>
+<div class="infra-card">
+<i class="hgi-stroke hgi-building-03"></i>
+<h4>Drainage System</h4>
+<p>Complete underground drainage and sewage infrastructure</p>
+</div>
+<div class="infra-card">
+<i class="hgi-stroke hgi-mountain"></i>
+<h4>Landscaped Parks</h4>
+<p>Central green spaces with walking paths and children's play areas</p>
+</div>
+<div class="infra-card">
+<i class="hgi-stroke hgi-shield-check"></i>
+<h4>Security</h4>
+<p>Gated entry, boundary walls, 24/7 security guards, CCTV coverage</p>
+</div>
+<div class="infra-card">
+<i class="hgi-stroke hgi-home-01"></i>
+<h4>Boundary Walls</h4>
+<p>Complete perimeter boundary with controlled entry/exit points</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LOCATION ADVANTAGES -->
+<section class="section section-dark">
+<div class="container">
+<h2 class="section-title reveal">Location Advantages</h2>
+<p class="section-subtitle reveal">Strategic connectivity that drives long-term value appreciation.</p>
+<div class="location-grid reveal">
+<ul class="location-list">
+<li><i class="hgi-stroke hgi-metro"></i> Delhi Metro Green Line — 5 min from project</li>
+<li><i class="hgi-stroke hgi-road-01"></i> KMP Expressway — Direct access</li>
+<li><i class="hgi-stroke hgi-location-05"></i> Connaught Place Delhi — 28 km</li>
+<li><i class="hgi-stroke hgi-location-05"></i> Dwarka Sector 21 — 15 km</li>
+<li><i class="hgi-stroke hgi-location-05"></i> IGI Airport — 35 km</li>
+<li><i class="hgi-stroke hgi-building-03"></i> Rohini — 20 km</li>
+<li><i class="hgi-stroke hgi-user-group"></i> Upcoming AIIMS Rewari Corridor</li>
+<li><i class="hgi-stroke hgi-chart-increase"></i> DMIC (Delhi-Mumbai Industrial Corridor)</li>
+</ul>
+<div class="location-highlight">
+<h3>Investment Perspective</h3>
+<p>Bahadurgarh has shown 35x land appreciation since 2006. With metro connectivity operational, KMP Expressway complete, and Delhi's western expansion inevitable, this corridor represents the last affordable entry point into Delhi NCR's growth story.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+<div class="container">
+<h2 class="reveal">Get Bahadurgarh Price Sheet</h2>
+<p class="reveal">Receive detailed pricing, plot availability, and payment plan options directly on WhatsApp.</p>
+<form class="cta-form reveal" action="mailto:sharma.manish53@gmail.com?subject=Bahadurgarh Price Sheet Request" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<button type="submit"><i class="hgi-stroke hgi-arrow-right-01"></i> Get Price Sheet</button>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo">
+<span class="logo-main">Estate</span>
+<span class="logo-sub">by HOMEGRAM</span>
+</div>
+<p>Premium real estate advisory and development since 2014. Helping families build wealth through strategically located plotted land investments.</p>
+</div>
+<div>
+<h4>Projects</h4>
+<ul>
+<li><a href="bahadurgarh.html">Bahadurgarh NCR</a></li>
+<li><a href="lansdowne.html">Lansdowne Hills</a></li>
+</ul>
+</div>
+<div>
+<h4>Company</h4>
+<ul>
+<li><a href="index.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Get in Touch</h4>
+<div class="footer-contact-item">
+<i class="hgi-stroke hgi-call"></i>
+<span>+91 96548 03560</span>
+</div>
+<div class="footer-contact-item">
+<i class="hgi-stroke hgi-mail-01"></i>
+<span>sharma.manish53@gmail.com</span>
+</div>
+<div class="footer-contact-item">
+<i class="hgi-stroke hgi-location-05"></i>
+<span>M3M Prive, Sector 73, Gurugram, Haryana</span>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2024 Estate by HOMEGRAM. All rights reserved. | HomeGram Real Estate
+</div>
+</div>
+</footer>
+
+<a href="https://wa.me/919654803560" target="_blank" class="whatsapp-float">
+<i class="hgi-stroke hgi-whatsapp"></i>
+</a>
+
+<script>
+window.addEventListener('scroll',()=>{document.querySelector('.nav').classList.toggle('scrolled',window.scrollY>50)});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+reveals.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lansdowne Hills — Estate by HOMEGRAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#FDFBF7;--ink:#0A0A0F;--gold:#C9A84C;--gold-light:#E8D48B;--gold-dark:#A68A3A;--gray-100:#F5F3EE;--gray-200:#E8E4DC;--gray-600:#6B6860;--gray-700:#3D3B37;--font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button,input,select,textarea{font-family:var(--font-body);border:none;outline:none}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 0;transition:all .4s ease}
+.nav.scrolled{background:rgba(10,10,15,.85);backdrop-filter:blur(20px);padding:14px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 24px}
+.logo{display:flex;flex-direction:column;align-items:flex-start}
+.logo-main{font-family:var(--font-display);font-style:italic;font-size:1.75rem;color:#fff;font-weight:700}
+.logo-sub{font-family:var(--font-mono);font-size:.6rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-top:-2px}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:400;transition:color .3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--gold);color:var(--ink);padding:10px 24px;border-radius:4px;font-weight:600;font-size:.85rem;transition:all .3s}
+.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:#fff;transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--ink);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.active{display:flex}
+.mobile-menu a{color:#fff;font-size:1.4rem;font-family:var(--font-display)}
+.mobile-close{position:absolute;top:24px;right:24px;color:#fff;font-size:1.5rem;cursor:pointer}
+
+.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.3) 0%,rgba(10,10,15,.7) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px}
+.hero-content h1{font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;margin-bottom:16px}
+.hero-content p{color:rgba(255,255,255,.8);font-size:1.1rem}
+.breadcrumb{font-family:var(--font-mono);font-size:.75rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
+.breadcrumb a{color:rgba(255,255,255,.6)}
+.breadcrumb a:hover{color:var(--gold)}
+
+.stats-bar{background:var(--ink);padding:40px 0}
+.stats-bar-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-item .stat-number{font-family:var(--font-mono);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--gold)}
+.stat-item .stat-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
+
+.section{padding:100px 0}
+.section-dark{background:var(--ink);color:#fff}
+.section-light{background:var(--cream)}
+.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.section-subtitle{color:var(--gray-600);font-size:1.05rem;max-width:600px}
+.section-dark .section-subtitle{color:rgba(255,255,255,.6)}
+
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.pillar-card{padding:40px 32px;background:var(--gray-100);border-radius:12px;transition:all .4s;text-align:center}
+.pillar-card:hover{background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.08);transform:translateY(-4px)}
+.pillar-card i{font-size:2.2rem;color:var(--gold);margin-bottom:20px;display:block}
+.pillar-card h4{font-size:1.1rem;margin-bottom:10px}
+.pillar-card p{color:var(--gray-600);font-size:.9rem;line-height:1.6}
+
+.calculator{background:var(--ink);padding:100px 0}
+.calc-container{max-width:700px;margin:0 auto}
+.calc-slider-group{margin-bottom:32px}
+.calc-slider-group label{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;color:rgba(255,255,255,.8);font-size:.95rem}
+.calc-slider-group label span{font-family:var(--font-mono);color:var(--gold);font-weight:700}
+.calc-slider-group input[type="range"]{width:100%;height:4px;-webkit-appearance:none;appearance:none;background:rgba(255,255,255,.15);border-radius:4px;outline:none;cursor:pointer}
+.calc-slider-group input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;background:var(--gold);border-radius:50%;cursor:pointer}
+.calc-result{margin-top:48px;padding:40px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;text-align:center}
+.calc-result h3{font-size:1.2rem;color:rgba(255,255,255,.8);margin-bottom:8px}
+.calc-result .result-number{font-family:var(--font-mono);font-size:2.5rem;font-weight:700;color:var(--gold);margin-bottom:8px}
+.calc-result p{color:rgba(255,255,255,.5);font-size:.85rem}
+
+.comparison{padding:100px 0;background:var(--cream)}
+.comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:60px}
+.comparison-col{padding:40px;border-radius:12px}
+.comparison-col.winner{background:#fff;border:2px solid var(--gold);box-shadow:0 20px 60px rgba(0,0,0,.06)}
+.comparison-col.loser{background:var(--gray-100);opacity:.7}
+.comparison-col h3{font-size:1.3rem;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.comparison-col h3 i{color:var(--gold)}
+.comparison-list{list-style:none}
+.comparison-list li{padding:10px 0;border-bottom:1px solid var(--gray-200);font-size:.9rem;color:var(--gray-600);display:flex;align-items:center;gap:8px}
+.comparison-list li i{color:var(--gold);font-size:.8rem}
+.comparison-col.loser .comparison-list li i{color:var(--gray-600)}
+
+.cta-section{background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));padding:80px 0}
+.cta-section h2{color:var(--ink);font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:12px}
+.cta-section p{color:var(--gray-700);margin-bottom:32px}
+.cta-form{display:flex;gap:12px;flex-wrap:wrap;max-width:700px}
+.cta-form input{padding:14px 20px;border-radius:4px;background:#fff;font-size:.9rem;flex:1;min-width:200px}
+.cta-form button{background:var(--ink);color:#fff;padding:14px 32px;border-radius:4px;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap}
+.cta-form button:hover{background:#1a1a24;transform:translateY(-1px)}
+
+.footer{background:var(--ink);color:rgba(255,255,255,.7);padding:80px 0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px}
+.footer-brand .logo{margin-bottom:16px}
+.footer-brand p{font-size:.9rem;line-height:1.7}
+.footer h4{color:#fff;font-size:.85rem;font-family:var(--font-mono);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:10px}
+.footer ul a{color:rgba(255,255,255,.6);font-size:.9rem;transition:color .3s}
+.footer ul a:hover{color:var(--gold)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:.9rem}
+.footer-contact-item i{color:var(--gold);margin-top:3px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
+
+.whatsapp-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:900;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.whatsapp-float i{color:#fff;font-size:1.5rem}
+
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+
+@media(max-width:1024px){
+.stats-bar-inner{grid-template-columns:repeat(2,1fr)}
+.pillars-grid{grid-template-columns:repeat(2,1fr)}
+.comparison-grid{grid-template-columns:1fr}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:flex}
+.pillars-grid{grid-template-columns:1fr}
+.stats-bar-inner{grid-template-columns:repeat(2,1fr);gap:20px}
+.cta-form{flex-direction:column}
+.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+
+<!-- NAVIGATION -->
+<nav class="nav">
+<div class="nav-inner">
+<a href="index.html" class="logo">
+<span class="logo-main">Estate</span>
+<span class="logo-sub">by HOMEGRAM</span>
+</a>
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="bahadurgarh.html">Bahadurgarh</a>
+<a href="lansdowne.html">Lansdowne</a>
+<a href="contact.html" class="nav-cta">Enquire Now</a>
+</div>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-close" onclick="toggleMenu()"><i class="hgi-stroke hgi-cancel-01"></i></div>
+<a href="index.html" onclick="toggleMenu()">Home</a>
+<a href="bahadurgarh.html" onclick="toggleMenu()">Bahadurgarh</a>
+<a href="lansdowne.html" onclick="toggleMenu()">Lansdowne</a>
+<a href="contact.html" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<img class="hero-bg" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90" alt="Lansdowne Hills">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="breadcrumb"><a href="index.html">Home</a> / Lansdowne Hills</div>
+<h1 style="margin-top:16px">Lansdowne Hills</h1>
+<p>Where the Himalayas meet smart investment. Cantonment-protected serenity with year-round returns.</p>
+</div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+<div class="container">
+<div class="stats-bar-inner">
+<div class="stat-item">
+<div class="stat-number">1706m</div>
+<div class="stat-label">Altitude</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">4hr</div>
+<div class="stat-label">From Delhi</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">4-15K</div>
+<div class="stat-label">Airbnb / Night</div>
+</div>
+<div class="stat-item">
+<div class="stat-number"><i class="hgi-stroke hgi-shield-check" style="font-size:1.8rem"></i></div>
+<div class="stat-label">Cantonment Protected</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 6 PILLARS -->
+<section class="section section-light">
+<div class="container">
+<h2 class="section-title reveal">6 Pillars of Lansdowne Investment</h2>
+<p class="section-subtitle reveal">A rare convergence of natural beauty, legal protection, and financial returns.</p>
+<div class="pillars-grid reveal">
+<div class="pillar-card">
+<i class="hgi-stroke hgi-user-group"></i>
+<h4>Year-Round Tourism</h4>
+<p>Unlike seasonal hill stations, Lansdowne attracts visitors 365 days. Pleasant summers, misty monsoons, snowy winters — every season draws tourists.</p>
+</div>
+<div class="pillar-card">
+<i class="hgi-stroke hgi-money-bag-02"></i>
+<h4>Rental Income</h4>
+<p>Airbnb properties in Lansdowne command Rs 4,000 to Rs 15,000 per night. Weekend occupancy exceeds 90% throughout the year.</p>
+</div>
+<div class="pillar-card">
+<i class="hgi-stroke hgi-mountain"></i>
+<h4>Himalayan Views</h4>
+<p>Unobstructed views of snow-capped Himalayan peaks. At 1706m altitude, enjoy pristine air quality and panoramic landscapes daily.</p>
+</div>
+<div class="pillar-card">
+<i class="hgi-stroke hgi-chart-increase"></i>
+<h4>Supply-Constrained Appreciation</h4>
+<p>Cantonment laws strictly limit new construction and commercial development. Limited supply + growing demand = consistent appreciation.</p>
+</div>
+<div class="pillar-card">
+<i class="hgi-stroke hgi-home-01"></i>
+<h4>Second Home</h4>
+<p>Your personal Himalayan retreat. Build a weekend home, retire here, or keep it as a legacy asset for generations.</p>
+</div>
+<div class="pillar-card">
+<i class="hgi-stroke hgi-road-01"></i>
+<h4>Infrastructure Growth</h4>
+<p>Upcoming Rishikesh-Karnaprayag rail line, improved NH connectivity, and Dehradun airport expansion enhance accessibility.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- YIELD CALCULATOR -->
+<section class="calculator">
+<div class="container">
+<div class="calc-container">
+<h2 class="section-title reveal" style="text-align:center;color:#fff">Yield Calculator</h2>
+<p class="section-subtitle reveal" style="text-align:center;margin:0 auto 48px;color:rgba(255,255,255,.6)">Estimate your potential rental returns from a Lansdowne property.</p>
+<div class="reveal">
+<div class="calc-slider-group">
+<label>Nightly Rate <span id="rateValue">Rs 8,000</span></label>
+<input type="range" id="rateSlider" min="4000" max="15000" value="8000" step="500">
+</div>
+<div class="calc-slider-group">
+<label>Nights Booked / Month <span id="nightsValue">12</span></label>
+<input type="range" id="nightsSlider" min="4" max="28" value="12" step="1">
+</div>
+<div class="calc-slider-group">
+<label>Operating Cost % <span id="costValue">30%</span></label>
+<input type="range" id="costSlider" min="10" max="50" value="30" step="5">
+</div>
+<div class="calc-result">
+<h3>Estimated Monthly Net Income</h3>
+<div class="result-number" id="resultIncome">Rs 67,200</div>
+<p>Annual projection: <span id="resultAnnual">Rs 8,06,400</span></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comparison">
+<div class="container">
+<h2 class="section-title reveal" style="text-align:center">Why Lansdowne Over Mussoorie</h2>
+<p class="section-subtitle reveal" style="text-align:center;margin:0 auto 0">Smart investors choose supply-constrained markets over saturated ones.</p>
+<div class="comparison-grid reveal">
+<div class="comparison-col winner">
+<h3><i class="hgi-stroke hgi-star"></i> Lansdowne</h3>
+<ul class="comparison-list">
+<li><i class="hgi-stroke hgi-shield-check"></i> Cantonment law prevents over-commercialization</li>
+<li><i class="hgi-stroke hgi-chart-increase"></i> Limited supply drives consistent appreciation</li>
+<li><i class="hgi-stroke hgi-mountain"></i> Pristine environment, minimal pollution</li>
+<li><i class="hgi-stroke hgi-user-group"></i> Peaceful — not a tourist circus</li>
+<li><i class="hgi-stroke hgi-money-bag-02"></i> Entry price 3-5x lower than Mussoorie</li>
+<li><i class="hgi-stroke hgi-road-01"></i> Better road connectivity (no landslide zones)</li>
+</ul>
+</div>
+<div class="comparison-col loser">
+<h3>Mussoorie / Dehradun</h3>
+<ul class="comparison-list">
+<li><i class="hgi-stroke hgi-cancel-01"></i> Oversaturated tourist destination</li>
+<li><i class="hgi-stroke hgi-cancel-01"></i> Excessive commercial construction</li>
+<li><i class="hgi-stroke hgi-cancel-01"></i> Traffic congestion on weekends</li>
+<li><i class="hgi-stroke hgi-cancel-01"></i> Inflated prices with limited upside</li>
+<li><i class="hgi-stroke hgi-cancel-01"></i> Environmental degradation</li>
+<li><i class="hgi-stroke hgi-cancel-01"></i> Frequent landslides on access roads</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+<div class="container">
+<h2 class="reveal">Get Lansdowne Project Details</h2>
+<p class="reveal">Receive plot maps, pricing, and site visit schedule. Limited inventory — early access for registered buyers.</p>
+<form class="cta-form reveal" action="mailto:sharma.manish53@gmail.com?subject=Lansdowne Project Enquiry" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<button type="submit"><i class="hgi-stroke hgi-arrow-right-01"></i> Get Details</button>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo">
+<span class="logo-main">Estate</span>
+<span class="logo-sub">by HOMEGRAM</span>
+</div>
+<p>Premium real estate advisory and development since 2014. Helping families build wealth through strategically located plotted land investments.</p>
+</div>
+<div>
+<h4>Projects</h4>
+<ul>
+<li><a href="bahadurgarh.html">Bahadurgarh NCR</a></li>
+<li><a href="lansdowne.html">Lansdowne Hills</a></li>
+</ul>
+</div>
+<div>
+<h4>Company</h4>
+<ul>
+<li><a href="index.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Get in Touch</h4>
+<div class="footer-contact-item">
+<i class="hgi-stroke hgi-call"></i>
+<span>+91 96548 03560</span>
+</div>
+<div class="footer-contact-item">
+<i class="hgi-stroke hgi-mail-01"></i>
+<span>sharma.manish53@gmail.com</span>
+</div>
+<div class="footer-contact-item">
+<i class="hgi-stroke hgi-location-05"></i>
+<span>M3M Prive, Sector 73, Gurugram, Haryana</span>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+&copy; 2024 Estate by HOMEGRAM. All rights reserved. | HomeGram Real Estate
+</div>
+</div>
+</footer>
+
+<a href="https://wa.me/919654803560" target="_blank" class="whatsapp-float">
+<i class="hgi-stroke hgi-whatsapp"></i>
+</a>
+
+<script>
+window.addEventListener('scroll',()=>{document.querySelector('.nav').classList.toggle('scrolled',window.scrollY>50)});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
+
+// YIELD CALCULATOR
+const rateSlider=document.getElementById('rateSlider');
+const nightsSlider=document.getElementById('nightsSlider');
+const costSlider=document.getElementById('costSlider');
+function updateCalc(){
+const rate=parseInt(rateSlider.value);
+const nights=parseInt(nightsSlider.value);
+const cost=parseInt(costSlider.value);
+document.getElementById('rateValue').textContent='Rs '+rate.toLocaleString('en-IN');
+document.getElementById('nightsValue').textContent=nights;
+document.getElementById('costValue').textContent=cost+'%';
+const gross=rate*nights;
+const net=Math.round(gross*(1-cost/100));
+const annual=net*12;
+document.getElementById('resultIncome').textContent='Rs '+net.toLocaleString('en-IN');
+document.getElementById('resultAnnual').textContent='Rs '+annual.toLocaleString('en-IN');
+}
+rateSlider.addEventListener('input',updateCalc);
+nightsSlider.addEventListener('input',updateCalc);
+costSlider.addEventListener('input',updateCalc);
+updateCalc();
+
+// SCROLL REVEAL
+const reveals=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+reveals.forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
