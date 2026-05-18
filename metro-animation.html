@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metro Connectivity — The Heritage at Bahadurgarh</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{background:radial-gradient(ellipse at 50% 40%,#0f0a05 0%,#070503 100%);min-height:100vh;font-family:'Josefin Sans',sans-serif;color:#f5f0e6;overflow-x:hidden}
+#connectivity{padding:40px 4%}
+.si{max-width:1480px;margin:0 auto}
+.metro-stage{position:relative;width:100%;border-radius:12px;overflow:hidden;background:radial-gradient(ellipse at 50% 60%,#1a140a 0%,#0a0704 100%);border:1px solid rgba(201,168,76,0.15);box-shadow:0 0 60px rgba(201,168,76,0.05)}
+.metro-stage svg{display:block;width:100%;height:auto}
+.status-line{text-align:center;margin-top:18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#d4c9b0;min-height:1.6em;transition:opacity 0.4s}
+.controls{display:flex;justify-content:center;gap:16px;margin-top:16px}
+.controls button{background:transparent;border:1px solid rgba(201,168,76,0.4);color:#c9a84c;padding:8px 22px;border-radius:6px;font-family:'Josefin Sans',sans-serif;font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all 0.3s}
+.controls button:hover{background:rgba(201,168,76,0.1);border-color:#c9a84c}
+.legend{display:flex;justify-content:center;gap:28px;margin-top:16px;font-size:0.78rem;color:#d4c9b0;letter-spacing:0.5px}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend .dot{width:8px;height:8px;border-radius:50%}
+.legend .dot.active{background:#c9a84c;box-shadow:0 0 6px #c9a84c}
+.legend .dot.upcoming{background:#3a3020;border:1px solid #6b5a2e}
+.legend .dot.journey{background:#e8c97a;box-shadow:0 0 8px #e8c97a}
+@media(max-width:768px){#connectivity{padding:20px 2%}.status-line{font-size:0.95rem}.legend{flex-wrap:wrap;gap:14px}}
+@media(prefers-reduced-motion:reduce){.metro-stage{animation:none}}
+</style>
+</head>
+<body>
+<section id="connectivity">
+<div class="si">
+<div class="metro-stage">
+<svg id="metroSvg" viewBox="0 0 1440 460" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="trackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" stop-color="#8b6914"/>
+<stop offset="50%" stop-color="#c9a84c"/>
+<stop offset="100%" stop-color="#8b6914"/>
+</linearGradient>
+<linearGradient id="trainBody" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" stop-color="#fafafc"/>
+<stop offset="40%" stop-color="#d8d8dc"/>
+<stop offset="100%" stop-color="#5a5a63"/>
+</linearGradient>
+<radialGradient id="headlightGlow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#fffbe6" stop-opacity="1"/>
+<stop offset="60%" stop-color="#c9a84c" stop-opacity="0.6"/>
+<stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="stationHalo" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#c9a84c" stop-opacity="0.4"/>
+<stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+</radialGradient>
+<filter id="glowFilter">
+<feGaussianBlur stdDeviation="3" result="blur"/>
+<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+
+<!-- Atmosphere layer -->
+<g id="atmosphere" opacity="0">
+<rect width="1440" height="460" fill="url(#trackGrad)" opacity="0.02"/>
+</g>
+
+<!-- Track -->
+<g id="trackGroup">
+<path id="mainTrack" d="M 80,280 L 1200,280" stroke="url(#trackGrad)" stroke-width="3" fill="none" opacity="0.6"/>
+<path d="M 80,283 L 1200,283" stroke="#3a3020" stroke-width="1" fill="none" opacity="0.4"/>
+<!-- Track ties -->
+<g stroke="#3a3020" stroke-width="1" opacity="0.3">
+<line x1="120" y1="276" x2="120" y2="287"/><line x1="160" y1="276" x2="160" y2="287"/>
+<line x1="200" y1="276" x2="200" y2="287"/><line x1="240" y1="276" x2="240" y2="287"/>
+<line x1="280" y1="276" x2="280" y2="287"/><line x1="320" y1="276" x2="320" y2="287"/>
+<line x1="360" y1="276" x2="360" y2="287"/><line x1="400" y1="276" x2="400" y2="287"/>
+<line x1="440" y1="276" x2="440" y2="287"/><line x1="480" y1="276" x2="480" y2="287"/>
+<line x1="520" y1="276" x2="520" y2="287"/><line x1="560" y1="276" x2="560" y2="287"/>
+<line x1="600" y1="276" x2="600" y2="287"/><line x1="640" y1="276" x2="640" y2="287"/>
+<line x1="680" y1="276" x2="680" y2="287"/><line x1="720" y1="276" x2="720" y2="287"/>
+<line x1="760" y1="276" x2="760" y2="287"/><line x1="800" y1="276" x2="800" y2="287"/>
+<line x1="840" y1="276" x2="840" y2="287"/><line x1="880" y1="276" x2="880" y2="287"/>
+<line x1="920" y1="276" x2="920" y2="287"/><line x1="960" y1="276" x2="960" y2="287"/>
+<line x1="1000" y1="276" x2="1000" y2="287"/><line x1="1040" y1="276" x2="1040" y2="287"/>
+<line x1="1080" y1="276" x2="1080" y2="287"/><line x1="1120" y1="276" x2="1120" y2="287"/>
+<line x1="1160" y1="276" x2="1160" y2="287"/>
+</g>
+</g>
+
+<!-- Border crossing at Tikri -->
+<g id="borderCrossing" opacity="0.4">
+<line x1="895" y1="240" x2="895" y2="320" stroke="#c9a84c" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="880" y="235" font-family="Josefin Sans" font-size="8" fill="#8b6914" text-anchor="middle">DELHI</text>
+<text x="910" y="235" font-family="Josefin Sans" font-size="8" fill="#8b6914" text-anchor="middle">HARYANA</text>
+</g>
+
+<!-- Stations -->
+<g id="stations">
+</g>
+
+<!-- Walking path -->
+<path id="walkPath" d="M 1200,280 C 1220,270 1250,250 1280,240 C 1310,230 1340,220 1360,200" fill="none" stroke="none"/>
+<path id="walkTrail" d="M 1200,280 C 1220,270 1250,250 1280,240 C 1310,230 1340,220 1360,200" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="6,4" opacity="0" stroke-linecap="round"/>
+
+<!-- Distance markers -->
+<g id="distanceMarkers" opacity="0">
+<g id="dm300" opacity="0">
+<circle cx="1230" cy="262" r="3" fill="#c9a84c" opacity="0.6"/>
+<text x="1230" y="255" font-family="Josefin Sans" font-size="8" fill="#d4c9b0" text-anchor="middle">300m</text>
+</g>
+<g id="dm500" opacity="0">
+<circle cx="1280" cy="240" r="3" fill="#c9a84c" opacity="0.6"/>
+<text x="1280" y="233" font-family="Josefin Sans" font-size="8" fill="#d4c9b0" text-anchor="middle">500m</text>
+</g>
+<g id="dm700" opacity="0">
+<circle cx="1340" cy="215" r="3" fill="#c9a84c" opacity="0.6"/>
+<text x="1340" y="208" font-family="Josefin Sans" font-size="8" fill="#d4c9b0" text-anchor="middle">700m</text>
+</g>
+</g>
+
+<!-- Walking orb -->
+<circle id="walkOrb" cx="1200" cy="280" r="5" fill="#e8c97a" opacity="0" filter="url(#glowFilter)"/>
+
+<!-- Project Pin -->
+<g id="projectPin" transform="translate(1360,200)" opacity="0">
+<circle class="pinHalo pinHalo1" cx="0" cy="0" r="20" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0"/>
+<circle class="pinHalo pinHalo2" cx="0" cy="0" r="30" fill="none" stroke="#c9a84c" stroke-width="0.4" opacity="0"/>
+<circle class="pinHalo pinHalo3" cx="0" cy="0" r="40" fill="none" stroke="#c9a84c" stroke-width="0.3" opacity="0"/>
+<path d="M 0,-30 C -8,-30 -14,-24 -14,-16 C -14,-6 0,5 0,5 C 0,5 14,-6 14,-16 C 14,-24 8,-30 0,-30 Z" fill="#c9a84c" stroke="#e8c97a" stroke-width="0.5"/>
+<circle cx="0" cy="-18" r="5" fill="#0f0a05" stroke="#e8c97a" stroke-width="0.5"/>
+<!-- Gate emblem -->
+<g id="gateEmblem">
+<rect class="emblemPillar" x="-6" y="-22" width="2" height="10" fill="#e8c97a" opacity="0"/>
+<rect class="emblemPillar" x="4" y="-22" width="2" height="10" fill="#e8c97a" opacity="0"/>
+<circle class="emblemCap" cx="-5" cy="-23" r="1.5" fill="#c9a84c" opacity="0"/>
+<circle class="emblemCap" cx="5" cy="-23" r="1.5" fill="#c9a84c" opacity="0"/>
+<path class="emblemArch" d="M -5,-22 Q 0,-28 5,-22" fill="none" stroke="#e8c97a" stroke-width="1" opacity="0"/>
+<circle class="emblemCrown" cx="0" cy="-28" r="2" fill="#c9a84c" opacity="0"/>
+<line class="emblemFinial" x1="-3" y1="-25" x2="-3" y2="-27" stroke="#e8c97a" stroke-width="0.5" opacity="0"/>
+<line class="emblemFinial" x1="3" y1="-25" x2="3" y2="-27" stroke="#e8c97a" stroke-width="0.5" opacity="0"/>
+</g>
+</g>
+
+<!-- Badge -->
+<g id="badge" transform="translate(1360,160)" opacity="0">
+<rect x="-70" y="-14" width="140" height="28" rx="14" fill="rgba(15,10,5,0.85)" stroke="#c9a84c" stroke-width="1"/>
+<text x="0" y="1" font-family="Cinzel" font-size="7" fill="#e8c97a" text-anchor="middle" letter-spacing="1.5">WE ARE HERE</text>
+<text x="0" y="10" font-family="Josefin Sans" font-size="6" fill="#d4c9b0" text-anchor="middle">700 M FROM METRO</text>
+<!-- Burst particles -->
+<circle class="burstP" cx="-60" cy="-10" r="1.5" fill="#c9a84c" opacity="0"/>
+<circle class="burstP" cx="60" cy="-10" r="1.5" fill="#c9a84c" opacity="0"/>
+<circle class="burstP" cx="-50" cy="10" r="1" fill="#e8c97a" opacity="0"/>
+<circle class="burstP" cx="50" cy="10" r="1" fill="#e8c97a" opacity="0"/>
+<circle class="burstP" cx="0" cy="-14" r="1.5" fill="#c9a84c" opacity="0"/>
+<circle class="burstP" cx="-70" cy="0" r="1" fill="#e8c97a" opacity="0"/>
+<circle class="burstP" cx="70" cy="0" r="1" fill="#e8c97a" opacity="0"/>
+</g>
+
+<!-- Train -->
+<g id="train" transform="translate(80,265)" opacity="0">
+<!-- Motion streaks -->
+<g id="motionStreaks" opacity="0">
+<line x1="-40" y1="5" x2="-70" y2="5" stroke="#c9a84c" stroke-width="0.5" opacity="0.6"/>
+<line x1="-40" y1="9" x2="-65" y2="9" stroke="#c9a84c" stroke-width="0.4" opacity="0.4"/>
+<line x1="-40" y1="13" x2="-60" y2="13" stroke="#c9a84c" stroke-width="0.3" opacity="0.3"/>
+</g>
+<!-- Headlight glow -->
+<ellipse id="headlightBeam" cx="78" cy="10" rx="20" ry="8" fill="url(#headlightGlow)" opacity="0"/>
+<!-- Rear coach -->
+<g transform="translate(-50,0)">
+<rect x="0" y="0" width="45" height="18" rx="2" fill="url(#trainBody)" stroke="#8a8a8f" stroke-width="0.5"/>
+<rect x="0" y="12" width="45" height="2" fill="#c9a84c" opacity="0.8"/>
+<rect x="5" y="2" width="8" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="5" y="2" width="8" height="3" fill="#2a4a6a" opacity="0.3"/>
+<rect x="16" y="2" width="8" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="16" y="2" width="8" height="3" fill="#2a4a6a" opacity="0.3"/>
+<rect x="27" y="2" width="8" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="27" y="2" width="8" height="3" fill="#2a4a6a" opacity="0.3"/>
+<line x1="22" y1="10" x2="22" y2="18" stroke="#6a6a6f" stroke-width="0.3"/>
+<circle cx="10" cy="20" r="2.5" fill="#4a4a4f" stroke="#6a6a6f" stroke-width="0.5"/>
+<circle cx="35" cy="20" r="2.5" fill="#4a4a4f" stroke="#6a6a6f" stroke-width="0.5"/>
+</g>
+<!-- Middle coach -->
+<g transform="translate(0,0)">
+<rect x="0" y="0" width="45" height="18" rx="2" fill="url(#trainBody)" stroke="#8a8a8f" stroke-width="0.5"/>
+<rect x="0" y="12" width="45" height="2" fill="#c9a84c" opacity="0.8"/>
+<rect x="5" y="2" width="8" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="5" y="2" width="8" height="3" fill="#2a4a6a" opacity="0.3"/>
+<rect x="16" y="2" width="8" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="16" y="2" width="8" height="3" fill="#2a4a6a" opacity="0.3"/>
+<rect x="27" y="2" width="8" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="27" y="2" width="8" height="3" fill="#2a4a6a" opacity="0.3"/>
+<line x1="22" y1="10" x2="22" y2="18" stroke="#6a6a6f" stroke-width="0.3"/>
+<circle cx="10" cy="20" r="2.5" fill="#4a4a4f" stroke="#6a6a6f" stroke-width="0.5"/>
+<circle cx="35" cy="20" r="2.5" fill="#4a4a4f" stroke="#6a6a6f" stroke-width="0.5"/>
+</g>
+<!-- Front coach (aerodynamic nose) -->
+<g transform="translate(50,0)">
+<path d="M 0,0 L 0,18 L 20,18 L 25,16 L 28,12 L 28,6 L 25,2 L 20,0 Z" fill="url(#trainBody)" stroke="#8a8a8f" stroke-width="0.5"/>
+<rect x="0" y="12" width="20" height="2" fill="#c9a84c" opacity="0.8"/>
+<path d="M 20,12 L 25,11 L 28,10" stroke="#c9a84c" stroke-width="2" fill="none" opacity="0.8"/>
+<rect x="3" y="2" width="7" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="3" y="2" width="7" height="3" fill="#2a4a6a" opacity="0.3"/>
+<rect x="12" y="2" width="6" height="7" rx="1" fill="#1a2a3a" opacity="0.7"/><rect x="12" y="2" width="6" height="3" fill="#2a4a6a" opacity="0.3"/>
+<circle cx="26" cy="9" r="2" fill="#fffbe6" opacity="0.9"/>
+<circle cx="10" cy="20" r="2.5" fill="#4a4a4f" stroke="#6a6a6f" stroke-width="0.5"/>
+</g>
+</g>
+
+</svg>
+</div>
+<p class="status-line" id="statusLine">Your journey begins at Kashmere Gate</p>
+<div class="controls">
+<button id="btnReplay" aria-label="Replay animation">&#8635; Replay</button>
+<button id="btnPause" aria-label="Pause animation">&#10074;&#10074; Pause</button>
+</div>
+<div class="legend">
+<span><span class="dot active"></span> Active Station</span>
+<span><span class="dot upcoming"></span> Upcoming</span>
+<span><span class="dot journey"></span> Your Journey</span>
+</div>
+</div>
+</section>
+<script>
+(function(){
+"use strict";
+gsap.registerPlugin(MotionPathPlugin);
+
+const stationData = [
+  {name:"Kashmere Gate", x:100, major:true},
+  {name:"Inderlok", x:240},
+  {name:"Punjabi Bagh West", x:380},
+  {name:"Peera Garhi", x:520},
+  {name:"Nangloi", x:660},
+  {name:"Mundka", x:800},
+  {name:"Tikri Border", x:920, border:true},
+  {name:"Pt. Shree Ram Sharma", x:1060},
+  {name:"Bahadurgarh City Park", x:1200, final:true}
+];
+
+const svg = document.getElementById("metroSvg");
+const stationsG = document.getElementById("stations");
+const statusLine = document.getElementById("statusLine");
+const btnReplay = document.getElementById("btnReplay");
+const btnPause = document.getElementById("btnPause");
+
+let masterTL, isPaused = false;
+
+// Create station markers
+stationData.forEach((s,i)=>{
+  const g = document.createElementNS("http://www.w3.org/2000/svg","g");
+  g.setAttribute("id","station-"+i);
+  g.setAttribute("transform","translate("+s.x+",280)");
+  g.setAttribute("class","station-marker");
+
+  // Halo (final station gets bigger)
+  const haloR = s.final ? 25 : 15;
+  const halo = document.createElementNS("http://www.w3.org/2000/svg","circle");
+  halo.setAttribute("cx","0"); halo.setAttribute("cy","0");
+  halo.setAttribute("r", haloR);
+  halo.setAttribute("fill","url(#stationHalo)");
+  halo.setAttribute("class","stHalo");
+  halo.setAttribute("opacity","0");
+  g.appendChild(halo);
+
+  // Ring pulse
+  const ring = document.createElementNS("http://www.w3.org/2000/svg","circle");
+  ring.setAttribute("cx","0"); ring.setAttribute("cy","0");
+  ring.setAttribute("r","6");
+  ring.setAttribute("fill","none");
+  ring.setAttribute("stroke","#c9a84c");
+  ring.setAttribute("stroke-width","1");
+  ring.setAttribute("class","stRing");
+  ring.setAttribute("opacity","0");
+  g.appendChild(ring);
+
+  // Platform bar
+  const plat = document.createElementNS("http://www.w3.org/2000/svg","rect");
+  plat.setAttribute("x","-12"); plat.setAttribute("y","-2");
+  plat.setAttribute("width","24"); plat.setAttribute("height","4");
+  plat.setAttribute("rx","2");
+  plat.setAttribute("fill","#3a3020");
+  plat.setAttribute("class","stPlatform");
+  g.appendChild(plat);
+
+  // Station dot
+  const dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
+  dot.setAttribute("cx","0"); dot.setAttribute("cy","0");
+  dot.setAttribute("r", s.final ? "6" : "4");
+  dot.setAttribute("fill","#3a3020");
+  dot.setAttribute("stroke","#6b5a2e");
+  dot.setAttribute("stroke-width","1");
+  dot.setAttribute("class","stDot");
+  g.appendChild(dot);
+
+  // Architectural pillar (above station)
+  const pillar = document.createElementNS("http://www.w3.org/2000/svg","g");
+  pillar.setAttribute("class","stPillar");
+  pillar.setAttribute("opacity","0.3");
+  const pl = document.createElementNS("http://www.w3.org/2000/svg","rect");
+  pl.setAttribute("x","-1"); pl.setAttribute("y","-25");
+  pl.setAttribute("width","2"); pl.setAttribute("height","18");
+  pl.setAttribute("fill","#6b5a2e");
+  pillar.appendChild(pl);
+  const arch = document.createElementNS("http://www.w3.org/2000/svg","path");
+  arch.setAttribute("d","M -4,-25 Q 0,-30 4,-25");
+  arch.setAttribute("fill","none");
+  arch.setAttribute("stroke","#6b5a2e");
+  arch.setAttribute("stroke-width","1");
+  pillar.appendChild(arch);
+  g.appendChild(pillar);
+
+  // Label
+  const label = document.createElementNS("http://www.w3.org/2000/svg","text");
+  label.setAttribute("x","0"); label.setAttribute("y","30");
+  label.setAttribute("text-anchor","middle");
+  label.setAttribute("font-family","Cinzel, serif");
+  label.setAttribute("font-size", s.final ? "9" : "8");
+  label.setAttribute("fill","#6b5a2e");
+  label.setAttribute("class","stLabel");
+  label.textContent = s.name;
+  g.appendChild(label);
+
+  stationsG.appendChild(g);
+});
+
+function setStatus(txt){ statusLine.textContent = txt; }
+
+function buildTimeline(){
+  if(masterTL){ masterTL.kill(); }
+  // Reset states
+  gsap.set("#atmosphere",{opacity:0});
+  gsap.set("#train",{x:80,y:265,opacity:0});
+  gsap.set("#motionStreaks",{opacity:0});
+  gsap.set("#headlightBeam",{opacity:0});
+  gsap.set("#walkOrb",{opacity:0,cx:1200,cy:280});
+  gsap.set("#walkTrail",{opacity:0,strokeDashoffset:200});
+  gsap.set("#distanceMarkers",{opacity:0});
+  gsap.set("#dm300",{opacity:0});
+  gsap.set("#dm500",{opacity:0});
+  gsap.set("#dm700",{opacity:0});
+  gsap.set("#projectPin",{opacity:0,y:20});
+  gsap.set("#badge",{opacity:0,y:10});
+  gsap.set(".burstP",{opacity:0,scale:0});
+  gsap.set(".pinHalo1, .pinHalo2, .pinHalo3",{opacity:0,scale:0});
+  gsap.set(".emblemPillar, .emblemCap, .emblemArch, .emblemCrown, .emblemFinial",{opacity:0});
+
+  document.querySelectorAll(".stDot").forEach(d=>{
+    gsap.set(d,{attr:{fill:"#3a3020",stroke:"#6b5a2e"}});
+  });
+  document.querySelectorAll(".stLabel").forEach(l=>{
+    gsap.set(l,{attr:{fill:"#6b5a2e"}});
+  });
+  document.querySelectorAll(".stHalo").forEach(h=>gsap.set(h,{opacity:0}));
+  document.querySelectorAll(".stRing").forEach(r=>gsap.set(r,{opacity:0,attr:{r:6}}));
+  document.querySelectorAll(".stPlatform").forEach(p=>gsap.set(p,{scaleX:1}));
+  document.querySelectorAll(".station-marker").forEach(m=>gsap.set(m,{scale:1}));
+
+  masterTL = gsap.timeline({
+    onComplete:function(){
+      setStatus("Journey complete — auto-replaying...");
+      gsap.delayedCall(2.5, function(){ buildTimeline(); masterTL.play(); });
+    }
+  });
+
+  // Phase 0: Atmosphere (1.2s)
+  masterTL.to("#atmosphere",{opacity:1,duration:1.2,ease:"power2.inOut",
+    onStart:function(){ setStatus("Your journey begins at Kashmere Gate"); }
+  });
+
+  // Phase 1: First station lights (0.5s)
+  masterTL.add(lightStation(0), "+=0.1");
+
+  // Phase 2: Train appears and moves station to station
+  masterTL.to("#train",{opacity:1,duration:0.3},"+=0.2");
+  masterTL.to("#headlightBeam",{opacity:0.8,duration:0.2});
+  masterTL.to("#motionStreaks",{opacity:1,duration:0.2});
+
+  for(let i=1; i<stationData.length; i++){
+    const s = stationData[i];
+    let dur = 0.85;
+    if(s.border) dur = 1.1;
+    if(s.final) dur = 1.0;
+
+    masterTL.to("#train",{
+      x: s.x - 30,
+      duration: dur,
+      ease:"power2.inOut",
+      onStart:function(){
+        const msg = s.border ? "Crossing Delhi-Haryana border at Tikri..." :
+                    s.final ? "Arriving at Bahadurgarh City Park" :
+                    "Travelling to " + s.name;
+        setStatus(msg);
+      }
+    });
+    masterTL.add(lightStation(i),"-=0.2");
+  }
+
+  // Phase 3: Arrival (0.5s)
+  masterTL.to("#motionStreaks",{opacity:0,duration:0.5});
+  masterTL.to("#headlightBeam",{opacity:0,duration:0.3},"-=0.3");
+  masterTL.to("#train",{opacity:0.3,duration:0.4,
+    onStart:function(){ setStatus("You have arrived at Bahadurgarh City Park"); }
+  });
+
+  // Phase 4: Walking orb (1.6s)
+  masterTL.to("#walkTrail",{opacity:1,duration:0.3},"+=0.3");
+  masterTL.to("#walkTrail",{strokeDashoffset:0,duration:1.2,ease:"none"});
+  masterTL.to("#distanceMarkers",{opacity:1,duration:0.1},"-=1.2");
+  masterTL.to("#dm300",{opacity:1,duration:0.3},"-=1.0");
+  masterTL.to("#dm500",{opacity:1,duration:0.3},"-=0.6");
+  masterTL.to("#dm700",{opacity:1,duration:0.3},"-=0.3");
+
+  masterTL.to("#walkOrb",{opacity:1,duration:0.2,
+    onStart:function(){ setStatus("Walking to The Heritage — just 700m from the metro"); }
+  },"-=1.5");
+  masterTL.to("#walkOrb",{
+    motionPath:{path:"#walkPath",align:"#walkPath",alignOrigin:[0.5,0.5]},
+    duration:1.6,ease:"power1.inOut"
+  },"-=1.4");
+  masterTL.to("#walkOrb",{opacity:0,scale:0.5,duration:0.3});
+
+  // Phase 5: Pin rises (0.6s)
+  masterTL.to("#projectPin",{opacity:1,y:0,duration:0.6,ease:"back.out(1.7)",
+    onStart:function(){ setStatus("The Heritage — Premium residences at Bahadurgarh"); }
+  },"+=0.2");
+
+  // Pin halos
+  masterTL.to(".pinHalo1",{opacity:0.6,scale:1,duration:0.4,ease:"power2.out"},"-=0.3");
+  masterTL.to(".pinHalo2",{opacity:0.4,scale:1,duration:0.5,ease:"power2.out"},"-=0.2");
+  masterTL.to(".pinHalo3",{opacity:0.2,scale:1,duration:0.6,ease:"power2.out"},"-=0.3");
+  masterTL.to(".pinHalo1, .pinHalo2, .pinHalo3",{opacity:0,duration:0.8},"+=0.2");
+
+  // Phase 6: Emblem assembles (2.5s)
+  masterTL.to(".emblemPillar",{opacity:1,duration:0.4,stagger:0.15},"+=0.2");
+  masterTL.to(".emblemCap",{opacity:1,duration:0.3,stagger:0.1});
+  masterTL.to(".emblemFinial",{opacity:1,duration:0.3,stagger:0.1});
+  masterTL.to(".emblemArch",{opacity:1,duration:0.5,ease:"power2.inOut"});
+  masterTL.to(".emblemCrown",{opacity:1,duration:0.4,ease:"back.out(2)"});
+
+  // Phase 7: Badge (0.7s)
+  masterTL.to("#badge",{opacity:1,y:0,duration:0.7,ease:"back.out(1.4)",
+    onStart:function(){ setStatus("WE ARE HERE — 700m from Bahadurgarh Metro"); }
+  },"+=0.3");
+  masterTL.to(".burstP",{opacity:1,scale:1.5,duration:0.3,stagger:0.04},"-=0.4");
+  masterTL.to(".burstP",{opacity:0,scale:2,duration:0.4,stagger:0.03});
+
+  return masterTL;
+}
+
+function lightStation(index){
+  const tl = gsap.timeline();
+  const g = document.getElementById("station-"+index);
+  if(!g) return tl;
+  const dot = g.querySelector(".stDot");
+  const label = g.querySelector(".stLabel");
+  const halo = g.querySelector(".stHalo");
+  const ring = g.querySelector(".stRing");
+  const platform = g.querySelector(".stPlatform");
+
+  tl.to(dot,{attr:{fill:"#c9a84c",stroke:"#e8c97a"},duration:0.2});
+  tl.to(platform,{scaleX:1.3,duration:0.2,ease:"power2.out"},"-=0.1");
+  tl.to(halo,{opacity:0.6,duration:0.3},"-=0.2");
+  tl.to(ring,{opacity:0.8,attr:{r:12},duration:0.4,ease:"power2.out"},"-=0.2");
+  tl.to(ring,{opacity:0,attr:{r:18},duration:0.3});
+  tl.to(g,{scale:1.15,duration:0.2,ease:"back.out(1.7)",transformOrigin:"50% 50%"},"-=0.5");
+  tl.to(g,{scale:1,duration:0.3,ease:"power2.inOut"});
+  tl.to(label,{attr:{fill:"#c9a84c"},duration:0.3},"-=0.6");
+  tl.to(platform,{scaleX:1,duration:0.3},"-=0.3");
+
+  return tl;
+}
+
+// Controls
+btnReplay.addEventListener("click",function(){
+  isPaused = false;
+  btnPause.innerHTML = "&#10074;&#10074; Pause";
+  buildTimeline();
+  masterTL.play();
+});
+
+btnPause.addEventListener("click",function(){
+  if(!masterTL) return;
+  if(isPaused){
+    masterTL.resume();
+    isPaused = false;
+    btnPause.innerHTML = "&#10074;&#10074; Pause";
+  } else {
+    masterTL.pause();
+    isPaused = true;
+    btnPause.innerHTML = "&#9654; Play";
+  }
+});
+
+// IntersectionObserver — pause when out of view
+const section = document.getElementById("connectivity");
+if("IntersectionObserver" in window){
+  const obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!masterTL) return;
+      if(!entry.isIntersecting && !isPaused){
+        masterTL.pause();
+      } else if(entry.isIntersecting && !isPaused){
+        masterTL.resume();
+      }
+    });
+  },{threshold:0.2});
+  obs.observe(section);
+}
+
+// prefers-reduced-motion
+const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+function handleMotionPref(){
+  if(motionQuery.matches){
+    if(masterTL){ masterTL.pause(); masterTL.progress(1); }
+    setStatus("Animation paused — reduced motion preferred");
+  }
+}
+motionQuery.addEventListener("change", handleMotionPref);
+handleMotionPref();
+
+// Start
+if(!motionQuery.matches){
+  buildTimeline();
+  masterTL.play();
+}
+
+})();
+</script>
+</body>
+</html>
+
+
