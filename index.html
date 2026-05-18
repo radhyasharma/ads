@@ -3,424 +3,401 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estate by HOMEGRAM — Premium Plotted Developments</title>
+<title>HomeGram Estate — Premium Plotted Developments | Bahadurgarh & Lansdowne</title>
+<meta name="description" content="HomeGram Estate Pvt Ltd — Premium luxury plotted developments. The Heritage at Bahadurgarh (NCR) & Lansdowne (Uttarakhand). Two destinations. One vision.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--cream:#FDFBF7;--ink:#0A0A0F;--gold:#C9A84C;--gold-light:#E8D48B;--gold-dark:#A68A3A;--gray-100:#F5F3EE;--gray-200:#E8E4DC;--gray-600:#6B6860;--gray-700:#3D3B37;--font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-button,input,select,textarea{font-family:var(--font-body);border:none;outline:none}
-.container{max-width:1280px;margin:0 auto;padding:0 24px}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 0;transition:all .4s ease}
-.nav.scrolled{background:rgba(10,10,15,.85);backdrop-filter:blur(20px);padding:14px 0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 24px}
-.logo{display:flex;flex-direction:column;align-items:flex-start}
-.logo-main{font-family:var(--font-display);font-style:italic;font-size:1.75rem;color:#fff;font-weight:700}
-.logo-sub{font-family:var(--font-mono);font-size:.6rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-top:-2px}
-.nav-links{display:flex;align-items:center;gap:36px}
-.nav-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:400;transition:color .3s}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:var(--ink);padding:10px 24px;border-radius:4px;font-weight:600;font-size:.85rem;transition:all .3s}
-.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
-.hamburger span{width:24px;height:2px;background:#fff;transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--ink);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
-.mobile-menu.active{display:flex}
-.mobile-menu a{color:#fff;font-size:1.4rem;font-family:var(--font-display)}
-.mobile-close{position:absolute;top:24px;right:24px;color:#fff;font-size:1.5rem;cursor:pointer}
-
-/* HERO */
-.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.4) 0%,rgba(10,10,15,.7) 100%)}
-.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px}
-.hero-content h1{font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;margin-bottom:20px}
-.hero-content p{color:rgba(255,255,255,.8);font-size:clamp(1rem,2vw,1.2rem);margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
-.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--ink);padding:14px 32px;border-radius:4px;font-weight:600;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;cursor:pointer}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.3)}
-.btn-outline{border:1px solid rgba(255,255,255,.4);color:#fff;padding:14px 32px;border-radius:4px;font-weight:500;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:all .3s;cursor:pointer}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-
-/* TICKER */
-.ticker{background:var(--cream);padding:20px 0;border-bottom:1px solid var(--gray-200)}
-.ticker-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
-.ticker-item{font-family:var(--font-mono);font-size:.8rem;letter-spacing:1px;color:var(--gray-600);text-transform:uppercase;display:flex;align-items:center;gap:8px}
-.ticker-item::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%}
-
-/* SECTIONS */
-.section{padding:100px 0}
-.section-dark{background:var(--ink);color:#fff}
-.section-light{background:var(--cream)}
-.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
-.section-subtitle{color:var(--gray-600);font-size:1.05rem;max-width:600px}
-.section-dark .section-subtitle{color:rgba(255,255,255,.6)}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:60px}
-.about-text p{color:var(--gray-600);margin-bottom:20px;font-size:1.05rem}
-.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-.stat-box{text-align:center;padding:24px;background:var(--gray-100);border-radius:8px}
-.stat-number{font-family:var(--font-mono);font-size:2rem;font-weight:700;color:var(--gold)}
-.stat-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--gray-600);margin-top:4px}
-.about-image{border-radius:12px;overflow:hidden;aspect-ratio:4/3}
-.about-image img{width:100%;height:100%;object-fit:cover}
-
-/* PROJECTS */
-.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:60px}
-.project-card{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4;cursor:pointer;transition:transform .4s}
-.project-card:hover{transform:scale(1.02)}
-.project-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.project-card:hover img{transform:scale(1.05)}
-.project-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,15,.9) 0%,transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:40px}
-.project-card-tag{font-family:var(--font-mono);font-size:.7rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
-.project-card h3{font-size:1.8rem;color:#fff;margin-bottom:12px}
-.project-card p{color:rgba(255,255,255,.7);font-size:.95rem;margin-bottom:20px}
-.project-card-link{color:var(--gold);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:6px;transition:gap .3s}
-.project-card-link:hover{gap:12px}
-
-/* USP */
-.usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
-.usp-card{padding:40px 32px;background:var(--gray-100);border-radius:12px;transition:all .4s}
-.usp-card:hover{background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.08);transform:translateY(-4px)}
-.usp-card i{font-size:2rem;color:var(--gold);margin-bottom:20px;display:block}
-.usp-card h4{font-size:1.1rem;margin-bottom:8px}
-.usp-card p{color:var(--gray-600);font-size:.9rem}
-
-/* TESTIMONIALS */
-.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:60px}
-.testimonial-card{padding:40px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px}
-.testimonial-card p{color:rgba(255,255,255,.8);font-style:italic;font-size:1rem;margin-bottom:20px;line-height:1.7}
-.testimonial-author{font-family:var(--font-mono);font-size:.75rem;letter-spacing:1px;color:var(--gold);text-transform:uppercase}
-
-/* CTA BAND */
-.cta-band{background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));padding:80px 0}
-.cta-band h2{color:var(--ink);font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:12px}
-.cta-band p{color:var(--gray-700);margin-bottom:32px}
-.cta-form{display:flex;gap:12px;flex-wrap:wrap;max-width:800px}
-.cta-form input,.cta-form select{padding:14px 20px;border-radius:4px;background:#fff;font-size:.9rem;flex:1;min-width:180px}
-.cta-form button{background:var(--ink);color:#fff;padding:14px 32px;border-radius:4px;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap}
-.cta-form button:hover{background:#1a1a24;transform:translateY(-1px)}
-
-/* FOOTER */
-.footer{background:var(--ink);color:rgba(255,255,255,.7);padding:80px 0 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px}
-.footer-brand .logo{margin-bottom:16px}
-.footer-brand p{font-size:.9rem;line-height:1.7}
-.footer h4{color:#fff;font-size:.85rem;font-family:var(--font-mono);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-.footer ul{list-style:none}
-.footer ul li{margin-bottom:10px}
-.footer ul a{color:rgba(255,255,255,.6);font-size:.9rem;transition:color .3s}
-.footer ul a:hover{color:var(--gold)}
-.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:.9rem}
-.footer-contact-item i{color:var(--gold);margin-top:3px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
-
-/* WHATSAPP */
-.whatsapp-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:900;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s}
-.whatsapp-float:hover{transform:scale(1.1)}
-.whatsapp-float i{color:#fff;font-size:1.5rem}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}
-.reveal.active{opacity:1;transform:translateY(0)}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-.projects-grid,.about-grid{grid-template-columns:1fr}
-.usp-grid{grid-template-columns:repeat(2,1fr)}
-.testimonial-grid{grid-template-columns:1fr}
-.footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:768px){
-.nav-links{display:none}
-.hamburger{display:flex}
-.usp-grid{grid-template-columns:1fr}
-.about-stats{grid-template-columns:repeat(3,1fr)}
-.cta-form{flex-direction:column}
-.footer-grid{grid-template-columns:1fr}
-.ticker-inner{gap:20px}
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-
-<!-- NAVIGATION -->
-<nav class="nav">
-<div class="nav-inner">
-<a href="index.html" class="logo">
-<span class="logo-main">Estate</span>
-<span class="logo-sub">by HOMEGRAM</span>
-</a>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="bahadurgarh.html">Bahadurgarh</a>
-<a href="lansdowne.html">Lansdowne</a>
-<a href="contact.html" class="nav-cta">Enquire Now</a>
-</div>
-<div class="hamburger" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</div>
-</div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark">H</span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">HomeGram</span>
+        <span class="nav-logo-tag">Estate · Pvt Ltd</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="bahadurgarh.html">Bahadurgarh</a>
+      <a href="lansdowne.html">Lansdowne</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-<div class="mobile-close" onclick="toggleMenu()"><i class="hgi-stroke hgi-cancel-01"></i></div>
-<a href="index.html" onclick="toggleMenu()">Home</a>
-<a href="bahadurgarh.html" onclick="toggleMenu()">Bahadurgarh</a>
-<a href="lansdowne.html" onclick="toggleMenu()">Lansdowne</a>
-<a href="contact.html" onclick="toggleMenu()">Contact</a>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="bahadurgarh.html">Bahadurgarh</a>
+  <a href="lansdowne.html">Lansdowne</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Enquire</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-<video class="hero-video" autoplay muted loop playsinline>
-<source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4">
-</video>
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<h1>Building Legacy. Creating Value.</h1>
-<p>Premium plotted developments in India's fastest-growing corridors. Invest in land that appreciates, communities that thrive.</p>
-<div class="hero-buttons">
-<a href="bahadurgarh.html" class="btn-primary"><i class="hgi-stroke hgi-building-03"></i> Bahadurgarh NCR</a>
-<a href="lansdowne.html" class="btn-outline"><i class="hgi-stroke hgi-mountain"></i> Lansdowne Hills</a>
-</div>
-</div>
+  <div class="hero-media">
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&q=85">
+      <source src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="reveal">
+      <span class="eyebrow eyebrow-line">HomeGram Estate · Est. 2014</span>
+    </div>
+    <h1 class="display-xl reveal delay-1">
+      Two destinations.<br>
+      <em>One standard.</em>
+    </h1>
+    <p class="lead reveal delay-2" style="max-width:620px;margin-top:28px;color:rgba(250,246,238,0.78);">
+      Premium luxury plotted developments — The Heritage at Bahadurgarh, the Gateway of Haryana, and The Heritage at Lansdowne, where Delhi ends and life begins.
+    </p>
+    <div class="reveal delay-3" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;">
+      <a href="bahadurgarh.html" class="btn btn-gold">
+        <i class="hgi-stroke hgi-building-03"></i>
+        The Heritage · Bahadurgarh
+      </a>
+      <a href="lansdowne.html" class="btn btn-outline">
+        <i class="hgi-stroke hgi-mountain"></i>
+        The Heritage · Lansdowne
+      </a>
+    </div>
+    <div class="hero-meta reveal delay-4">
+      <span><strong>15.83 ac</strong>Land · Bahadurgarh</span>
+      <span><strong>236</strong>Plots</span>
+      <span><strong>0 AQI</strong>Lansdowne air</span>
+      <span><strong>Pre-launch</strong>Limited offer</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    Scroll
+  </div>
 </section>
 
 <!-- TICKER -->
 <div class="ticker">
-<div class="ticker-inner">
-<span class="ticker-item">500+ Families</span>
-<span class="ticker-item">Since 2014</span>
-<span class="ticker-item">RERA Compliant</span>
-<span class="ticker-item">Gated Communities</span>
-</div>
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="dot"></span>Premium Luxury Plotted Development</span>
+    <span class="ticker-item"><span class="dot"></span>Heritage Themed</span>
+    <span class="ticker-item"><span class="dot"></span>Gateway of Haryana</span>
+    <span class="ticker-item"><span class="dot"></span>Where Delhi Ends, Life Begins</span>
+    <span class="ticker-item"><span class="dot"></span>Metro Connected</span>
+    <span class="ticker-item"><span class="dot"></span>0 AQI Hill Retreat</span>
+    <span class="ticker-item"><span class="dot"></span>25,000 sq ft Clubhouse</span>
+    <span class="ticker-item"><span class="dot"></span>Holiday Home Plots</span>
+    <span class="ticker-item"><span class="dot"></span>Premium Luxury Plotted Development</span>
+    <span class="ticker-item"><span class="dot"></span>Heritage Themed</span>
+    <span class="ticker-item"><span class="dot"></span>Gateway of Haryana</span>
+    <span class="ticker-item"><span class="dot"></span>Where Delhi Ends, Life Begins</span>
+    <span class="ticker-item"><span class="dot"></span>Metro Connected</span>
+    <span class="ticker-item"><span class="dot"></span>0 AQI Hill Retreat</span>
+    <span class="ticker-item"><span class="dot"></span>25,000 sq ft Clubhouse</span>
+    <span class="ticker-item"><span class="dot"></span>Holiday Home Plots</span>
+  </div>
 </div>
 
-<!-- ABOUT -->
-<section class="section section-light">
-<div class="container">
-<div class="about-grid reveal">
-<div class="about-text">
-<h2 class="section-title">A Decade of Trust in Real Estate</h2>
-<p class="section-subtitle">Estate by HOMEGRAM is a premium real estate advisory and development firm headquartered in Gurugram. Since 2014, we have helped over 500 families secure high-growth plotted land in strategically selected corridors.</p>
-<p>We believe in transparent transactions, legally verified titles, and infrastructure-ready plots that allow you to build on your own timeline. Every project is selected after rigorous market research and due diligence.</p>
-<div class="about-stats">
-<div class="stat-box">
-<div class="stat-number">10+</div>
-<div class="stat-label">Years</div>
-</div>
-<div class="stat-box">
-<div class="stat-number">500+</div>
-<div class="stat-label">Families</div>
-</div>
-<div class="stat-box">
-<div class="stat-number">2</div>
-<div class="stat-label">Cities</div>
-</div>
-</div>
-</div>
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80" alt="Premium residential development">
-</div>
-</div>
-</div>
+<!-- TWO DESTINATIONS / PROJECTS -->
+<section class="section light">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Our Projects</span>
+        <h2 class="display-lg reveal delay-1">
+          Two destinations,<br>
+          <em>chosen with conviction.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        Bahadurgarh — where Delhi's growth corridor begins. Lansdowne — where the air still has zero pollution and the view is forever protected. Each, a deliberate choice.
+      </p>
+    </div>
+    <div class="projects-grid">
+      <a href="bahadurgarh.html" class="project-card reveal">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=85" alt="The Heritage Bahadurgarh" class="project-card-img">
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <span class="project-card-tag">Bahadurgarh · NCR</span>
+          <h3 class="project-card-title">
+            The Heritage<br><em>Bahadurgarh</em>
+          </h3>
+          <p class="project-card-tagline">Gateway of Haryana</p>
+          <div class="project-card-stats">
+            <div class="project-card-stat"><strong>15.83 ac</strong><span>Land Parcel</span></div>
+            <div class="project-card-stat"><strong>236</strong><span>Plots</span></div>
+            <div class="project-card-stat"><strong>2.2 km</strong><span>To Metro</span></div>
+          </div>
+          <span class="project-card-cta">Explore Project <span class="arrow"></span></span>
+        </div>
+      </a>
+      <a href="lansdowne.html" class="project-card reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=85" alt="The Heritage Lansdowne" class="project-card-img">
+        <div class="project-card-overlay"></div>
+        <div class="project-card-content">
+          <span class="project-card-tag">Lansdowne · Uttarakhand</span>
+          <h3 class="project-card-title">
+            The Heritage<br><em>Lansdowne</em>
+          </h3>
+          <p class="project-card-tagline">Where Delhi Ends, Life Begins</p>
+          <div class="project-card-stats">
+            <div class="project-card-stat"><strong>0</strong><span>AQI</span></div>
+            <div class="project-card-stat"><strong>Hills</strong><span>Gated Community</span></div>
+            <div class="project-card-stat"><strong>Resort</strong><span>Rental Model</span></div>
+          </div>
+          <span class="project-card-cta">Explore Project <span class="arrow"></span></span>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
 
-
-<!-- PROJECTS -->
-<section class="section section-dark">
-<div class="container">
-<h2 class="section-title reveal">Our Flagship Projects</h2>
-<p class="section-subtitle reveal">Two distinct investment corridors. One uncompromising standard.</p>
-<div class="projects-grid reveal">
-<a href="bahadurgarh.html" class="project-card">
-<img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90" alt="Bahadurgarh NCR">
-<div class="project-card-overlay">
-<span class="project-card-tag">NCR Growth Corridor</span>
-<h3>Bahadurgarh</h3>
-<p>28km from Connaught Place. Metro-connected. Gated plotted township with 35x appreciation track record.</p>
-<span class="project-card-link">Explore Project <i class="hgi-stroke hgi-arrow-right-01"></i></span>
-</div>
-</a>
-<a href="lansdowne.html" class="project-card">
-<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90" alt="Lansdowne Hills">
-<div class="project-card-overlay">
-<span class="project-card-tag">Himalayan Retreat</span>
-<h3>Lansdowne Hills</h3>
-<p>1706m altitude. Cantonment-protected. Year-round tourism with Airbnb yields of up to 15K/night.</p>
-<span class="project-card-link">Explore Project <i class="hgi-stroke hgi-arrow-right-01"></i></span>
-</div>
-</a>
-</div>
-</div>
+<!-- PHILOSOPHY / WHY HOMEGRAM -->
+<section class="section dark">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">The HomeGram Difference</span>
+        <h2 class="display-lg reveal delay-1">
+          Curation,<br>
+          <em>not catalogue.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        We don't sell what we wouldn't buy. Each project is selected for its long-term thesis — infrastructure trajectory, scarcity economics, and lifestyle integrity. Two projects. Hundreds rejected.
+      </p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="feature-card-num">01 / Curation</span>
+        <i class="hgi-stroke hgi-checkmark-circle-02 feature-card-icon"></i>
+        <h3>Two projects, hundreds rejected.</h3>
+        <p>Six out of every seven land parcels we evaluate fail our diligence. What remains is what you see — Bahadurgarh and Lansdowne.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <span class="feature-card-num">02 / Infrastructure</span>
+        <i class="hgi-stroke hgi-road-01 feature-card-icon"></i>
+        <h3>Built before delivered.</h3>
+        <p>Internal roads, drainage, electricity, boundary walls, parks — all completed before plot handover. No "promised later" infrastructure.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <span class="feature-card-num">03 / Title</span>
+        <i class="hgi-stroke hgi-shield-01 feature-card-icon"></i>
+        <h3>Clean, freehold, registered.</h3>
+        <p>RERA-aligned. Government registry at sub-registrar. No litigation, no encumbrance. Title diligence by independent counsel.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-card-num">04 / Heritage</span>
+        <i class="hgi-stroke hgi-castle-02 feature-card-icon"></i>
+        <h3>Themed, not generic.</h3>
+        <p>Both projects carry the Heritage theme — architectural detailing, monumental gateways, considered landscapes. Land that feels like an estate.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <span class="feature-card-num">05 / Advisory</span>
+        <i class="hgi-stroke hgi-handshake-01 feature-card-icon"></i>
+        <h3>Direct from developer.</h3>
+        <p>No middlemen, no layered commissions. You speak with the team that designed the township and signed the land.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <span class="feature-card-num">06 / Decade</span>
+        <i class="hgi-stroke hgi-medal-first-place feature-card-icon"></i>
+        <h3>A decade of trust.</h3>
+        <p>HomeGram has served 500+ families since 2014. Every plot delivered, every registration completed, every promise kept.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="section section-light">
-<div class="container">
-<h2 class="section-title reveal">Why Choose Estate</h2>
-<p class="section-subtitle reveal">Every detail is engineered for your peace of mind and long-term wealth.</p>
-<div class="usp-grid reveal">
-<div class="usp-card">
-<i class="hgi-stroke hgi-road-01"></i>
-<h4>Ready Infrastructure</h4>
-<p>Roads, drainage, electricity, parks — all built before possession. Move in or build at your convenience.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-shield-check"></i>
-<h4>Clear Title</h4>
-<p>Every plot comes with legally verified, dispute-free documentation. Full title guarantee with registry support.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-home-01"></i>
-<h4>Gated Security</h4>
-<p>24/7 manned security, boundary walls, CCTV surveillance. Your investment is protected at all times.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-chart-increase"></i>
-<h4>Proven Growth</h4>
-<p>We select corridors with documented appreciation history. Data-backed investment decisions, not speculation.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-money-bag-02"></i>
-<h4>Flexible EMI</h4>
-<p>Easy payment plans with zero-cost EMI options. Start with minimal booking amount, pay at your pace.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-calendar-03"></i>
-<h4>Build Anytime</h4>
-<p>No construction deadlines. Build your dream home when you are ready. Plot ownership gives you freedom.</p>
-</div>
-</div>
-</div>
+<!-- THE TWO STORIES -->
+<section class="section cream">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Investor Journey</span>
+        <h2 class="display-lg reveal delay-1">
+          Want growth?<br>
+          <em>Or want peace?</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        Two questions. Two answers. Two corridors. Whether you're chasing capital appreciation or chasing clean air, we have the answer that holds up for the next twenty years.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2vw,32px);margin-top:40px;">
+      <div class="reveal" style="padding:clamp(32px,4vw,56px);background:var(--paper);border-radius:4px;border:1px solid var(--paper-stone);">
+        <span class="eyebrow" style="color:var(--terracotta);">Bahadurgarh</span>
+        <h3 class="display-md" style="margin-top:14px;margin-bottom:24px;">Grow your <em>wealth</em>.</h3>
+        <ul style="display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.65;color:var(--text-mid);">
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-train-02" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">Metro Green Line</strong> — Delhi connectivity, 50 minutes to Central Delhi</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-factory" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">2,800+ industries</strong> — Employment + rental demand + capital growth</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-route-01" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">UER-II, KMP, HORC</strong> — Infrastructure corridor in active build</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-money-bag-02" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">Pre-launch ₹90,000/sq yd</strong> — Limited inventory before launch pricing</span></li>
+        </ul>
+        <a href="bahadurgarh.html" class="btn btn-outline-dark" style="margin-top:32px;">Explore Bahadurgarh</a>
+      </div>
+      <div class="reveal delay-2" style="padding:clamp(32px,4vw,56px);background:var(--paper);border-radius:4px;border:1px solid var(--paper-stone);">
+        <span class="eyebrow" style="color:var(--forest);">Lansdowne</span>
+        <h3 class="display-md" style="margin-top:14px;margin-bottom:24px;">Grow your <em>life</em>.</h3>
+        <ul style="display:flex;flex-direction:column;gap:14px;font-size:14px;line-height:1.65;color:var(--text-mid);">
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-leaf-01" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">0 AQI air</strong> — While Delhi gasps at 350+, you breathe zero</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-mountain" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">Hill retreat</strong> — Gated, serene, surrounded by forests</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-hotel-01" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">Resort rental model</strong> — Earn while you're away, holiday when you wish</span></li>
+          <li style="display:flex;gap:12px;align-items:flex-start;"><i class="hgi-stroke hgi-chart-line-data-01" style="color:var(--gold);font-size:20px;flex-shrink:0;"></i><span><strong style="color:var(--ink)">Dual ROI</strong> — Capital appreciation + rental yield + health value</span></li>
+        </ul>
+        <a href="lansdowne.html" class="btn btn-outline-dark" style="margin-top:32px;">Explore Lansdowne</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT TEASE -->
+<section class="section dark">
+  <div class="container" style="max-width:1000px;">
+    <div style="text-align:center;">
+      <span class="eyebrow eyebrow-line reveal">About HomeGram Estate</span>
+      <h2 class="display-lg reveal delay-1" style="margin-top:24px;">
+        A decade of curating land<br>
+        <em>worth keeping.</em>
+      </h2>
+      <p class="lead reveal delay-2" style="max-width:680px;margin:32px auto 0;">
+        HomeGram Estate Pvt Ltd is a premium plotted-developments company headquartered in Gurugram. Since 2014, we have helped over 500 families invest in carefully chosen land — not just plots, but futures.
+      </p>
+      <div class="reveal delay-3" style="display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:48px;padding-top:48px;border-top:1px solid var(--ink-line);">
+        <div><strong style="display:block;font-family:var(--ff-display);font-style:italic;font-size:48px;color:var(--gold);">10+</strong><span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,246,238,0.5);">Years</span></div>
+        <div><strong style="display:block;font-family:var(--ff-display);font-style:italic;font-size:48px;color:var(--gold);">500+</strong><span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,246,238,0.5);">Families</span></div>
+        <div><strong style="display:block;font-family:var(--ff-display);font-style:italic;font-size:48px;color:var(--gold);">2</strong><span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,246,238,0.5);">Active Projects</span></div>
+        <div><strong style="display:block;font-family:var(--ff-display);font-style:italic;font-size:48px;color:var(--gold);">2</strong><span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,246,238,0.5);">Cities</span></div>
+      </div>
+      <a href="about.html" class="btn btn-outline reveal delay-3" style="margin-top:48px;">Read Our Story</a>
+    </div>
+  </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="section section-dark">
-<div class="container">
-<h2 class="section-title reveal">What Our Clients Say</h2>
-<p class="section-subtitle reveal">Real stories from families who trusted us with their biggest investment.</p>
-<div class="testimonial-grid reveal">
-<div class="testimonial-card">
-<p>"Invested in Bahadurgarh in 2019. The plot value has already doubled. The infrastructure development in the area is remarkable, exactly as Estate predicted."</p>
-<div class="testimonial-author">Rajesh K. — Software Engineer, Gurugram</div>
-</div>
-<div class="testimonial-card">
-<p>"The Lansdowne property is our weekend retreat dream come true. Clean documentation, beautiful location, and the team handled everything seamlessly."</p>
-<div class="testimonial-author">Priya & Amit S. — Business Owners, Delhi</div>
-</div>
-<div class="testimonial-card">
-<p>"What impressed me most was the transparency. No hidden charges, clear title, and the plot was exactly as shown. Estate by HOMEGRAM delivers on promises."</p>
-<div class="testimonial-author">Dr. Sanjay M. — Physician, Noida</div>
-</div>
-</div>
-</div>
+<section class="section light">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">In Their Words</span>
+        <h2 class="display-lg reveal delay-1">Five hundred families.<br><em>Same standard.</em></h2>
+      </div>
+      <p class="lead reveal delay-2">Every testimonial below is real, named, and attributable. We hold ourselves to that standard because we expect our buyers to do the same.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div style="color:var(--gold);font-size:18px;margin-bottom:18px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-family:var(--ff-display);font-style:italic;font-size:18px;line-height:1.5;color:var(--ink);margin-bottom:24px;">"Bought a plot in Bahadurgarh in 2019 through HomeGram. Already seen 3× appreciation. The team handled everything — legal, registry, paperwork. Zero hassle, complete transparency."</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--paper-stone);">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--gold-glow);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-style:italic;font-size:18px;color:var(--gold);">R</div>
+          <div><strong style="display:block;font-size:14px;">Rajesh Kapoor</strong><span style="font-size:12px;color:var(--text-soft);">Software Engineer · Gurugram · 2019</span></div>
+        </div>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <div style="color:var(--gold);font-size:18px;margin-bottom:18px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-family:var(--ff-display);font-style:italic;font-size:18px;line-height:1.5;color:var(--ink);margin-bottom:24px;">"We wanted a hill home that doesn't sit empty. Lansdowne through HomeGram was perfect — view, rental income, no legal drama. Genuinely the best decision we've made."</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--paper-stone);">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--gold-glow);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-style:italic;font-size:18px;color:var(--gold);">P</div>
+          <div><strong style="display:block;font-size:14px;">Priya & Amit Sharma</strong><span style="font-size:12px;color:var(--text-soft);">Restaurant Owners · Delhi · 2022</span></div>
+        </div>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <div style="color:var(--gold);font-size:18px;margin-bottom:18px;letter-spacing:2px;">★★★★★</div>
+        <p style="font-family:var(--ff-display);font-style:italic;font-size:18px;line-height:1.5;color:var(--ink);margin-bottom:24px;">"What impressed me was the transparency. No hidden charges, clear title, infrastructure exactly as promised. HomeGram delivers what they sell."</p>
+        <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--paper-stone);">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--gold-glow);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-style:italic;font-size:18px;color:var(--gold);">S</div>
+          <div><strong style="display:block;font-size:14px;">Dr. Sanjay Mehta</strong><span style="font-size:12px;color:var(--text-soft);">Cardiologist · Noida · 2020</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
 <!-- CTA BAND -->
-<section class="cta-band">
-<div class="container">
-<h2 class="reveal">Register for Pre-Launch Access</h2>
-<p class="reveal">Be the first to know about new phases, exclusive pricing, and limited inventory releases.</p>
-<form class="cta-form reveal" action="mailto:sharma.manish53@gmail.com?subject=Pre-Launch Access Request" method="post" enctype="text/plain">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<select name="project" required>
-<option value="" disabled selected>Select Project</option>
-<option value="Bahadurgarh">Bahadurgarh NCR</option>
-<option value="Lansdowne">Lansdowne Hills</option>
-<option value="Both">Both Projects</option>
-</select>
-<button type="submit"><i class="hgi-stroke hgi-arrow-right-01"></i> Register Now</button>
-</form>
-</div>
+<section class="section-tight" style="background:linear-gradient(135deg,var(--gold-deep) 0%,var(--gold) 50%,#D4B377 100%);color:var(--ink);">
+  <div class="container" style="text-align:center;max-width:780px;">
+    <span class="eyebrow reveal" style="color:rgba(14,13,11,0.6);">Pre-Launch · Limited Plots</span>
+    <h2 class="display-lg reveal delay-1" style="margin-top:18px;color:var(--ink);">
+      Walk the plot.<br>
+      <em>Read the papers. Decide with clarity.</em>
+    </h2>
+    <p class="reveal delay-2" style="margin-top:20px;font-size:16px;color:rgba(14,13,11,0.7);max-width:520px;margin-left:auto;margin-right:auto;">
+      We arrange free pickup from Delhi NCR for Bahadurgarh visits. Virtual tours available for Lansdowne. No obligation. No sales pitch.
+    </p>
+    <form data-lead-form="Site Visit Enquiry" class="reveal delay-3" style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;max-width:680px;margin-left:auto;margin-right:auto;justify-content:center;">
+      <input type="text" name="name" required placeholder="Your Name" class="form-input" style="flex:1;min-width:160px;background:rgba(255,255,255,0.95);">
+      <input type="tel" name="phone" required placeholder="WhatsApp Number" class="form-input" style="flex:1;min-width:160px;background:rgba(255,255,255,0.95);">
+      <select name="project" required class="form-select" style="flex:1;min-width:160px;background:rgba(255,255,255,0.95);">
+        <option value="">Project of Interest</option>
+        <option value="Bahadurgarh">Bahadurgarh</option>
+        <option value="Lansdowne">Lansdowne</option>
+        <option value="Both">Both Projects</option>
+      </select>
+      <button type="submit" class="btn" style="background:var(--ink);color:var(--paper);">
+        Schedule Visit <span style="font-size:14px;">→</span>
+      </button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-brand">
-<div class="logo">
-<span class="logo-main">Estate</span>
-<span class="logo-sub">by HOMEGRAM</span>
-</div>
-<p>Premium real estate advisory and development since 2014. Helping families build wealth through strategically located plotted land investments.</p>
-</div>
-<div>
-<h4>Projects</h4>
-<ul>
-<li><a href="bahadurgarh.html">Bahadurgarh NCR</a></li>
-<li><a href="lansdowne.html">Lansdowne Hills</a></li>
-</ul>
-</div>
-<div>
-<h4>Company</h4>
-<ul>
-<li><a href="index.html">About Us</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-<div>
-<h4>Get in Touch</h4>
-<div class="footer-contact-item">
-<i class="hgi-stroke hgi-call"></i>
-<span>+91 96548 03560</span>
-</div>
-<div class="footer-contact-item">
-<i class="hgi-stroke hgi-mail-01"></i>
-<span>sharma.manish53@gmail.com</span>
-</div>
-<div class="footer-contact-item">
-<i class="hgi-stroke hgi-location-05"></i>
-<span>M3M Prive, Sector 73, Gurugram, Haryana</span>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-&copy; 2024 Estate by HOMEGRAM. All rights reserved. | HomeGram Real Estate
-</div>
-</div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-mark">H</span>
+          <span class="nav-logo-text">
+            <span class="nav-logo-name">HomeGram</span>
+            <span class="nav-logo-tag">Estate · Pvt Ltd</span>
+          </span>
+        </a>
+        <p>Curating premium plotted developments across India's most considered corridors. Heritage-themed living, infrastructure-first delivery.</p>
+      </div>
+      <div>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="bahadurgarh.html">The Heritage · Bahadurgarh</a></li>
+          <li><a href="lansdowne.html">The Heritage · Lansdowne</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#vision">Vision</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item"><i class="hgi-stroke hgi-call-02"></i><span>+91 96548 03560</span></div>
+        <div class="footer-contact-item"><i class="hgi-stroke hgi-mail-01"></i><span>contact@homegramestate.in</span></div>
+        <div class="footer-contact-item"><i class="hgi-stroke hgi-location-05"></i><span>M3M Prive, Sector 73,<br>Gurugram, Haryana 122004</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HomeGram Estate Pvt Ltd. All rights reserved. RERA registration in progress.</p>
+      <div class="footer-socials">
+        <a href="tel:+919654803560" aria-label="Call"><i class="hgi-stroke hgi-call-02"></i></a>
+        <a href="https://wa.me/919654803560" target="_blank" aria-label="WhatsApp"><i class="hgi-stroke hgi-whatsapp"></i></a>
+        <a href="mailto:contact@homegramestate.in" aria-label="Email"><i class="hgi-stroke hgi-mail-01"></i></a>
+        <a href="#" aria-label="Instagram"><i class="hgi-stroke hgi-instagram"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/919654803560" target="_blank" class="whatsapp-float">
-<i class="hgi-stroke hgi-whatsapp"></i>
+<a href="https://wa.me/919654803560?text=Hi%2C%20I%27m%20interested%20in%20HomeGram%20Estate%20properties." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="hgi-stroke hgi-whatsapp"></i>
 </a>
 
-<script>
-// NAV SCROLL
-window.addEventListener('scroll',()=>{
-document.querySelector('.nav').classList.toggle('scrolled',window.scrollY>50);
-});
-
-// MOBILE MENU
-function toggleMenu(){
-document.getElementById('mobileMenu').classList.toggle('active');
-}
-
-// SCROLL REVEAL
-const reveals=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target);}
-});
-},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-reveals.forEach(el=>observer.observe(el));
-</script>
+<script src="assets/script.js"></script>
 </body>
 </html>

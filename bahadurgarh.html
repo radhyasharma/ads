@@ -3,358 +3,463 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bahadurgarh NCR — Estate by HOMEGRAM</title>
+<title>The Heritage · Bahadurgarh — HomeGram Estate</title>
+<meta name="description" content="The Heritage by HomeGram at Bahadurgarh — 15.83 acres, 236 plots, 2.2km from Metro Green Line. Premium plotted development in NCR's fastest growing corridor.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--cream:#FDFBF7;--ink:#0A0A0F;--gold:#C9A84C;--gold-light:#E8D48B;--gold-dark:#A68A3A;--gray-100:#F5F3EE;--gray-200:#E8E4DC;--gray-600:#6B6860;--gray-700:#3D3B37;--font-display:'Playfair Display',serif;--font-body:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.2}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-button,input,select,textarea{font-family:var(--font-body);border:none;outline:none}
-.container{max-width:1280px;margin:0 auto;padding:0 24px}
-
-.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 0;transition:all .4s ease}
-.nav.scrolled{background:rgba(10,10,15,.85);backdrop-filter:blur(20px);padding:14px 0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1280px;margin:0 auto;padding:0 24px}
-.logo{display:flex;flex-direction:column;align-items:flex-start}
-.logo-main{font-family:var(--font-display);font-style:italic;font-size:1.75rem;color:#fff;font-weight:700}
-.logo-sub{font-family:var(--font-mono);font-size:.6rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-top:-2px}
-.nav-links{display:flex;align-items:center;gap:36px}
-.nav-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:400;transition:color .3s}
-.nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:var(--ink);padding:10px 24px;border-radius:4px;font-weight:600;font-size:.85rem;transition:all .3s}
-.nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
-.hamburger span{width:24px;height:2px;background:#fff;transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--ink);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
-.mobile-menu.active{display:flex}
-.mobile-menu a{color:#fff;font-size:1.4rem;font-family:var(--font-display)}
-.mobile-close{position:absolute;top:24px;right:24px;color:#fff;font-size:1.5rem;cursor:pointer}
-
-.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,15,.3) 0%,rgba(10,10,15,.75) 100%)}
-.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px}
-.hero-content h1{font-size:clamp(2.5rem,6vw,4.5rem);color:#fff;margin-bottom:16px}
-.hero-content p{color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:8px}
-.breadcrumb{font-family:var(--font-mono);font-size:.75rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
-.breadcrumb a{color:rgba(255,255,255,.6)}
-.breadcrumb a:hover{color:var(--gold)}
-
-.stats-bar{background:var(--ink);padding:40px 0}
-.stats-bar-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.stat-item .stat-number{font-family:var(--font-mono);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--gold)}
-.stat-item .stat-label{font-family:var(--font-mono);font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
-
-.section{padding:100px 0}
-.section-dark{background:var(--ink);color:#fff}
-.section-light{background:var(--cream)}
-.section-title{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
-.section-subtitle{color:var(--gray-600);font-size:1.05rem;max-width:600px}
-.section-dark .section-subtitle{color:rgba(255,255,255,.6)}
-
-.usp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:60px}
-.usp-card{padding:48px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;transition:all .4s}
-.usp-card:hover{background:rgba(255,255,255,.06);border-color:var(--gold);transform:translateY(-4px)}
-.usp-card i{font-size:2.2rem;color:var(--gold);margin-bottom:20px;display:block}
-.usp-card h4{font-size:1.2rem;color:#fff;margin-bottom:10px}
-.usp-card p{color:rgba(255,255,255,.65);font-size:.95rem;line-height:1.7}
-
-.infra-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
-.infra-card{padding:32px;background:var(--gray-100);border-radius:12px;text-align:center;transition:all .4s}
-.infra-card:hover{background:#fff;box-shadow:0 16px 48px rgba(0,0,0,.06);transform:translateY(-4px)}
-.infra-card i{font-size:2rem;color:var(--gold);margin-bottom:16px;display:block}
-.infra-card h4{font-size:1rem;margin-bottom:6px}
-.infra-card p{color:var(--gray-600);font-size:.85rem}
-
-.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:60px;align-items:start}
-.location-list{list-style:none}
-.location-list li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:16px;color:rgba(255,255,255,.8);font-size:.95rem}
-.location-list li i{color:var(--gold);font-size:1.2rem;flex-shrink:0}
-.location-highlight{background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:12px;padding:40px;text-align:center}
-.location-highlight h3{color:var(--gold);margin-bottom:12px;font-size:1.4rem}
-.location-highlight p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7}
-
-.cta-section{background:linear-gradient(135deg,var(--gold-dark),var(--gold),var(--gold-light));padding:80px 0}
-.cta-section h2{color:var(--ink);font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:12px}
-.cta-section p{color:var(--gray-700);margin-bottom:32px}
-.cta-form{display:flex;gap:12px;flex-wrap:wrap;max-width:700px}
-.cta-form input{padding:14px 20px;border-radius:4px;background:#fff;font-size:.9rem;flex:1;min-width:200px}
-.cta-form button{background:var(--ink);color:#fff;padding:14px 32px;border-radius:4px;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap}
-.cta-form button:hover{background:#1a1a24;transform:translateY(-1px)}
-
-.footer{background:var(--ink);color:rgba(255,255,255,.7);padding:80px 0 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px}
-.footer-brand .logo{margin-bottom:16px}
-.footer-brand p{font-size:.9rem;line-height:1.7}
-.footer h4{color:#fff;font-size:.85rem;font-family:var(--font-mono);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-.footer ul{list-style:none}
-.footer ul li{margin-bottom:10px}
-.footer ul a{color:rgba(255,255,255,.6);font-size:.9rem;transition:color .3s}
-.footer ul a:hover{color:var(--gold)}
-.footer-contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:.9rem}
-.footer-contact-item i{color:var(--gold);margin-top:3px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;text-align:center;font-size:.8rem;color:rgba(255,255,255,.4)}
-
-.whatsapp-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:900;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .3s}
-.whatsapp-float:hover{transform:scale(1.1)}
-.whatsapp-float i{color:#fff;font-size:1.5rem}
-
-.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}
-.reveal.active{opacity:1;transform:translateY(0)}
-
-@media(max-width:1024px){
-.stats-bar-inner{grid-template-columns:repeat(2,1fr)}
-.usp-grid,.location-grid{grid-template-columns:1fr}
-.infra-grid{grid-template-columns:repeat(2,1fr)}
-.footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:768px){
-.nav-links{display:none}
-.hamburger{display:flex}
-.infra-grid{grid-template-columns:1fr}
-.stats-bar-inner{grid-template-columns:repeat(2,1fr);gap:20px}
-.cta-form{flex-direction:column}
-.footer-grid{grid-template-columns:1fr}
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-
-<!-- NAVIGATION -->
-<nav class="nav">
-<div class="nav-inner">
-<a href="index.html" class="logo">
-<span class="logo-main">Estate</span>
-<span class="logo-sub">by HOMEGRAM</span>
-</a>
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="bahadurgarh.html">Bahadurgarh</a>
-<a href="lansdowne.html">Lansdowne</a>
-<a href="contact.html" class="nav-cta">Enquire Now</a>
-</div>
-<div class="hamburger" onclick="toggleMenu()">
-<span></span><span></span><span></span>
-</div>
-</div>
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark">H</span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">HomeGram</span>
+        <span class="nav-logo-tag">Estate · Pvt Ltd</span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="bahadurgarh.html" class="active">Bahadurgarh</a>
+      <a href="lansdowne.html">Lansdowne</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
 </nav>
-
-<div class="mobile-menu" id="mobileMenu">
-<div class="mobile-close" onclick="toggleMenu()"><i class="hgi-stroke hgi-cancel-01"></i></div>
-<a href="index.html" onclick="toggleMenu()">Home</a>
-<a href="bahadurgarh.html" onclick="toggleMenu()">Bahadurgarh</a>
-<a href="lansdowne.html" onclick="toggleMenu()">Lansdowne</a>
-<a href="contact.html" onclick="toggleMenu()">Contact</a>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="bahadurgarh.html">Bahadurgarh</a>
+  <a href="lansdowne.html">Lansdowne</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Enquire</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-<img class="hero-bg" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90" alt="Bahadurgarh NCR">
-<div class="hero-overlay"></div>
-<div class="hero-content">
-<div class="breadcrumb"><a href="index.html">Home</a> / Bahadurgarh NCR</div>
-<h1 style="margin-top:16px">Bahadurgarh NCR</h1>
-<p>Delhi's next growth frontier. Metro-connected, expressway-linked, exponentially appreciating.</p>
-</div>
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90" alt="The Heritage Bahadurgarh">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="breadcrumb reveal">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span>Bahadurgarh</span>
+    </div>
+    <h1 class="display-xl reveal delay-1">The Heritage · Bahadurgarh</h1>
+    <p class="lead reveal delay-2" style="max-width:640px;margin-top:24px;color:rgba(250,246,238,0.78);">
+      Gateway of Haryana — Satellite Town of West Delhi
+    </p>
+    <p class="reveal delay-3" style="font-family:var(--ff-display);font-style:italic;font-size:clamp(20px,2.5vw,28px);color:var(--gold);margin-top:20px;">
+      Where Delhi Ends, Growth Begins.
+    </p>
+    <div class="reveal delay-3" style="margin-top:36px;">
+      <a href="#pricing" class="btn btn-gold">
+        <i class="hgi-stroke hgi-money-bag-02"></i>
+        View Pricing
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span class="hero-scroll-line"></span>
+    Scroll
+  </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-<div class="container">
-<div class="stats-bar-inner">
-<div class="stat-item">
-<div class="stat-number">28km</div>
-<div class="stat-label">From Delhi CP</div>
-</div>
-<div class="stat-item">
-<div class="stat-number">35x</div>
-<div class="stat-label">Growth Since 2006</div>
-</div>
-<div class="stat-item">
-<div class="stat-number"><i class="hgi-stroke hgi-metro" style="font-size:1.8rem"></i></div>
-<div class="stat-label">Metro Connected</div>
-</div>
-<div class="stat-item">
-<div class="stat-number">6L+</div>
-<div class="stat-label">Population</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- USPs -->
-<section class="section section-dark">
-<div class="container">
-<h2 class="section-title reveal">Why Bahadurgarh</h2>
-<p class="section-subtitle reveal">The only Tier-2 city in Haryana with direct Delhi Metro connectivity.</p>
-<div class="usp-grid reveal">
-<div class="usp-card">
-<i class="hgi-stroke hgi-metro"></i>
-<h4>Delhi Metro Green Line</h4>
-<p>Bahadurgarh is the terminus of the Delhi Metro Green Line. Direct connectivity to Inderlok, CP, and across Delhi NCR. Only Tier-2 Haryana city with this advantage.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-road-01"></i>
-<h4>KMP Expressway Access</h4>
-<p>Kundli-Manesar-Palwal Expressway passes through Bahadurgarh, connecting it to the entire NCR industrial belt and enabling massive commercial growth.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-chart-increase"></i>
-<h4>60-80% Below NCR Rates</h4>
-<p>Land prices are still 60-80% lower than comparable NCR locations like Dwarka, Gurugram, and Noida. Early entry means maximum appreciation potential.</p>
-</div>
-<div class="usp-card">
-<i class="hgi-stroke hgi-home-01"></i>
-<h4>Gated Township</h4>
-<p>Our project is a fully gated plotted society with boundary walls, 24/7 security, internal roads, drainage, and landscaped parks. Ready infrastructure from day one.</p>
-</div>
-</div>
-</div>
+<!-- STAT BAND -->
+<section class="dark">
+  <div class="stat-band">
+    <div class="stat-cell">
+      <strong>15.83</strong>
+      <span>Acres</span>
+    </div>
+    <div class="stat-cell">
+      <strong>236</strong>
+      <span>Plots</span>
+    </div>
+    <div class="stat-cell">
+      <strong>2.2km</strong>
+      <span>To Metro</span>
+    </div>
+    <div class="stat-cell">
+      <strong>₹90K</strong>
+      <span>Pre-Launch / sq yd</span>
+    </div>
+  </div>
 </section>
 
-
-<!-- INFRASTRUCTURE -->
-<section class="section section-light">
-<div class="container">
-<h2 class="section-title reveal">What's Included</h2>
-<p class="section-subtitle reveal">Complete infrastructure delivered before possession. No hidden development costs.</p>
-<div class="infra-grid reveal">
-<div class="infra-card">
-<i class="hgi-stroke hgi-road-01"></i>
-<h4>Internal Roads</h4>
-<p>30-40 ft wide paved internal roads with proper drainage planning</p>
-</div>
-<div class="infra-card">
-<i class="hgi-stroke hgi-sun-03"></i>
-<h4>Electricity</h4>
-<p>Underground electrical connections with individual meters for each plot</p>
-</div>
-<div class="infra-card">
-<i class="hgi-stroke hgi-building-03"></i>
-<h4>Drainage System</h4>
-<p>Complete underground drainage and sewage infrastructure</p>
-</div>
-<div class="infra-card">
-<i class="hgi-stroke hgi-mountain"></i>
-<h4>Landscaped Parks</h4>
-<p>Central green spaces with walking paths and children's play areas</p>
-</div>
-<div class="infra-card">
-<i class="hgi-stroke hgi-shield-check"></i>
-<h4>Security</h4>
-<p>Gated entry, boundary walls, 24/7 security guards, CCTV coverage</p>
-</div>
-<div class="infra-card">
-<i class="hgi-stroke hgi-home-01"></i>
-<h4>Boundary Walls</h4>
-<p>Complete perimeter boundary with controlled entry/exit points</p>
-</div>
-</div>
-</div>
+<!-- INVESTMENT THESIS -->
+<section class="section light">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Investment Thesis</span>
+        <h2 class="display-lg reveal delay-1">
+          Why Bahadurgarh.<br>
+          <em>Why now.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        A convergence of metro connectivity, industrial demand, and infrastructure corridors at pre-launch pricing that's 60-80% below equivalent NCR benchmarks.
+      </p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <span class="feature-card-num">01 / Connectivity</span>
+        <i class="hgi-stroke hgi-train-02 feature-card-icon"></i>
+        <h3>Metro Green Line</h3>
+        <p>2.2km from Badli station. Delhi connectivity via Brigadier Hoshiar Singh, Bahadurgarh City, Pandit Shree Ram Sharma, and Tikri Delhi Border stations.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <span class="feature-card-num">02 / Corridors</span>
+        <i class="hgi-stroke hgi-route-01 feature-card-icon"></i>
+        <h3>KMP · UER-II · HORC</h3>
+        <p>Three mega infrastructure corridors converging around Bahadurgarh — Kundli-Manesar-Palwal, Urban Extension Road II, and Haryana Orbital Rail Corridor in active build.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <span class="feature-card-num">03 / Industry</span>
+        <i class="hgi-stroke hgi-factory feature-card-icon"></i>
+        <h3>Industrial Powerhouse</h3>
+        <p>2,800+ industries including 200 large-scale units across ~490 acres. HNG, Somany, Parle, Yokohama, Relaxo, Hindustan Sanitaryware — all anchored here.</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-card-num">04 / Pricing</span>
+        <i class="hgi-stroke hgi-money-bag-02 feature-card-icon"></i>
+        <h3>Pre-Launch Advantage</h3>
+        <p>At ₹90,000/sq yd pre-launch, pricing is 60-80% below equivalent NCR micro-markets. Launch price: ₹1.12-1.25 Lakh/sq yd. First-mover alpha is significant.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- LOCATION ADVANTAGES -->
-<section class="section section-dark">
-<div class="container">
-<h2 class="section-title reveal">Location Advantages</h2>
-<p class="section-subtitle reveal">Strategic connectivity that drives long-term value appreciation.</p>
-<div class="location-grid reveal">
-<ul class="location-list">
-<li><i class="hgi-stroke hgi-metro"></i> Delhi Metro Green Line — 5 min from project</li>
-<li><i class="hgi-stroke hgi-road-01"></i> KMP Expressway — Direct access</li>
-<li><i class="hgi-stroke hgi-location-05"></i> Connaught Place Delhi — 28 km</li>
-<li><i class="hgi-stroke hgi-location-05"></i> Dwarka Sector 21 — 15 km</li>
-<li><i class="hgi-stroke hgi-location-05"></i> IGI Airport — 35 km</li>
-<li><i class="hgi-stroke hgi-building-03"></i> Rohini — 20 km</li>
-<li><i class="hgi-stroke hgi-user-group"></i> Upcoming AIIMS Rewari Corridor</li>
-<li><i class="hgi-stroke hgi-chart-increase"></i> DMIC (Delhi-Mumbai Industrial Corridor)</li>
-</ul>
-<div class="location-highlight">
-<h3>Investment Perspective</h3>
-<p>Bahadurgarh has shown 35x land appreciation since 2006. With metro connectivity operational, KMP Expressway complete, and Delhi's western expansion inevitable, this corridor represents the last affordable entry point into Delhi NCR's growth story.</p>
-</div>
-</div>
-</div>
+<!-- METRO ANIMATION -->
+<section class="section dark">
+  <div class="container">
+    <div class="section-head-single">
+      <span class="eyebrow eyebrow-line reveal">Metro Connectivity</span>
+      <h2 class="display-lg reveal delay-1" style="margin-top:18px;">
+        Green Line.<br>
+        <em>Direct to Delhi.</em>
+      </h2>
+    </div>
+    <div class="metro-stage">
+      <div class="metro-line-badge">Delhi Metro · Green Line</div>
+      <div class="metro-track-wrap">
+        <div class="metro-track"></div>
+        <div class="metro-train"></div>
+        <div class="metro-stations">
+          <div class="metro-station is-key">
+            <div class="metro-station-dot"></div>
+            <span class="metro-station-name">Bahadurgarh City</span>
+          </div>
+          <div class="metro-station">
+            <div class="metro-station-dot"></div>
+            <span class="metro-station-name">Brigadier Hoshiar Singh</span>
+          </div>
+          <div class="metro-station">
+            <div class="metro-station-dot"></div>
+            <span class="metro-station-name">Pandit Shree Ram Sharma</span>
+          </div>
+          <div class="metro-station">
+            <div class="metro-station-dot"></div>
+            <span class="metro-station-name">Tikri Delhi Border</span>
+          </div>
+          <div class="metro-station is-key">
+            <div class="metro-station-dot"></div>
+            <span class="metro-station-name">Badli</span>
+            <span class="metro-station-distance">2.2 km from site</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-<div class="container">
-<h2 class="reveal">Get Bahadurgarh Price Sheet</h2>
-<p class="reveal">Receive detailed pricing, plot availability, and payment plan options directly on WhatsApp.</p>
-<form class="cta-form reveal" action="mailto:sharma.manish53@gmail.com?subject=Bahadurgarh Price Sheet Request" method="post" enctype="text/plain">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<button type="submit"><i class="hgi-stroke hgi-arrow-right-01"></i> Get Price Sheet</button>
-</form>
-</div>
+<!-- TOWNSHIP SECTION -->
+<section class="section cream">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Township Infrastructure</span>
+        <h2 class="display-lg reveal delay-1">
+          What's included.<br>
+          <em>Built before handover.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        Every element of township infrastructure is completed before plot delivery. No promises — only finished, usable amenities from day one.
+      </p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <i class="hgi-stroke hgi-road-01 feature-card-icon"></i>
+        <h3>9m & 12m Wide Roads</h3>
+        <p>Internal road network with 9-meter and 12-meter wide roads — designed for township-level traffic flow and ease of movement.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <i class="hgi-stroke hgi-flash feature-card-icon"></i>
+        <h3>Underground Electricity</h3>
+        <p>Complete underground electrical cabling — no overhead wires, no visual clutter, no interruptions during weather events.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <i class="hgi-stroke hgi-droplet feature-card-icon"></i>
+        <h3>Drainage & Sewage</h3>
+        <p>Engineered drainage and sewage system across the full 15.83-acre township, designed for long-term functionality and compliance.</p>
+      </div>
+      <div class="feature-card reveal">
+        <i class="hgi-stroke hgi-leaf-01 feature-card-icon"></i>
+        <h3>Landscaped Parks & Miyawaki</h3>
+        <p>Kid's Park, Senior Citizen Park, Flower Valley, Rock Garden, and a Miyawaki Forest — dense green canopy within the township.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <i class="hgi-stroke hgi-shield-01 feature-card-icon"></i>
+        <h3>24/7 Security & CCTV</h3>
+        <p>Round-the-clock security with CCTV surveillance, gated entry-exit points, and manned checkpoints for complete peace of mind.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <i class="hgi-stroke hgi-building-06 feature-card-icon"></i>
+        <h3>Boundary Walls</h3>
+        <p>Complete perimeter boundary wall enclosing the township — ensuring privacy, security, and a defined community space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES SECTION -->
+<section class="section light">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Lifestyle Amenities</span>
+        <h2 class="display-lg reveal delay-1">
+          25,000 sq ft clubhouse.<br>
+          <em>And everything around it.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        A world-class clubhouse, championship-grade sports facilities, and curated green spaces — all designed for a life that doesn't need to leave the township.
+      </p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <i class="hgi-stroke hgi-dumbbell-03 feature-card-icon"></i>
+        <h3>Gymnasium</h3>
+        <p>State-of-the-art fitness centre inside the 25,000 sq ft clubhouse — cardio, strength, and functional training zones.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <i class="hgi-stroke hgi-celebration feature-card-icon"></i>
+        <h3>Banquet Hall</h3>
+        <p>Grand banquet and event hall within the clubhouse for celebrations, gatherings, and community events.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <i class="hgi-stroke hgi-coffee-01 feature-card-icon"></i>
+        <h3>Lounge & Terrace Café</h3>
+        <p>Premium lounge area and rooftop terrace café — perfect for unwinding, informal meetings, or weekend evenings.</p>
+      </div>
+      <div class="feature-card reveal">
+        <i class="hgi-stroke hgi-cricket-bat feature-card-icon"></i>
+        <h3>Cricket & Sports</h3>
+        <p>Cricket ground, badminton courts, basketball court, pickle ball court, and indoor games — all within the township.</p>
+      </div>
+      <div class="feature-card reveal delay-1">
+        <i class="hgi-stroke hgi-mic-01 feature-card-icon"></i>
+        <h3>Amphitheatre</h3>
+        <p>Open-air amphitheatre for cultural programs, screenings, community gatherings, and festive celebrations.</p>
+      </div>
+      <div class="feature-card reveal delay-2">
+        <i class="hgi-stroke hgi-tree-06 feature-card-icon"></i>
+        <h3>Parks & Gardens</h3>
+        <p>Kid's Park, Senior Citizen Park, Flower Valley, Rock Garden, and dense Miyawaki Forest — layers of green across the township.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTIVITY SECTION -->
+<section class="section dark">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Location & Connectivity</span>
+        <h2 class="display-lg reveal delay-1">
+          5 minutes from Delhi.<br>
+          <em>Connected to everything.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        Sector 11, Bahadurgarh — where NCR's infrastructure corridors converge. Metro, expressways, airport, and industrial demand all within reach.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);margin-top:48px;">
+      <div class="reveal">
+        <h3 style="font-family:var(--ff-display);font-size:24px;margin-bottom:28px;color:var(--gold);">Distances</h3>
+        <ul style="display:flex;flex-direction:column;gap:16px;">
+          <li style="display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--ink-line);font-size:14px;color:rgba(250,246,238,0.7);">
+            <span>Bahadurgarh Stadium</span><strong style="color:var(--gold);">700m</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--ink-line);font-size:14px;color:rgba(250,246,238,0.7);">
+            <span>Badli Metro Station</span><strong style="color:var(--gold);">2.2 km</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--ink-line);font-size:14px;color:rgba(250,246,238,0.7);">
+            <span>Delhi Border</span><strong style="color:var(--gold);">5 mins</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--ink-line);font-size:14px;color:rgba(250,246,238,0.7);">
+            <span>UER-II Expressway</span><strong style="color:var(--gold);">10 mins</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--ink-line);font-size:14px;color:rgba(250,246,238,0.7);">
+            <span>IGI Airport</span><strong style="color:var(--gold);">20-25 mins</strong>
+          </li>
+          <li style="display:flex;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--ink-line);font-size:14px;color:rgba(250,246,238,0.7);">
+            <span>Gurgaon</span><strong style="color:var(--gold);">25 mins</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="reveal delay-2" style="padding:clamp(28px,3vw,44px);background:var(--ink-soft);border:1px solid var(--ink-line);border-radius:4px;">
+        <h3 style="font-family:var(--ff-display);font-size:24px;margin-bottom:20px;color:var(--gold);">Investment Perspective</h3>
+        <p style="font-size:14px;line-height:1.75;color:rgba(250,246,238,0.7);margin-bottom:20px;">
+          Bahadurgarh sits at the intersection of three mega-corridors: HORC, Gati Shakti Hub, UER-II, KMP, and Dwarka Expressway.
+        </p>
+        <p style="font-size:14px;line-height:1.75;color:rgba(250,246,238,0.7);margin-bottom:20px;">
+          With 2,800+ industries, 200 large-scale units, and ~490 acres of industrial area — rental and capital demand is structurally driven.
+        </p>
+        <p style="font-size:14px;line-height:1.75;color:rgba(250,246,238,0.7);">
+          Education infrastructure: HIT, PDM University, Delhi Technical Campus, Maharaja Agrasen Medical College, and 75+ schools ensure family-ready infrastructure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="section cream" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow eyebrow-line reveal">Pricing</span>
+        <h2 class="display-lg reveal delay-1">
+          Pre-launch advantage.<br>
+          <em>Limited inventory.</em>
+        </h2>
+      </div>
+      <p class="lead reveal delay-2">
+        Secure your plot at pre-launch pricing before official launch rates apply. Phase 1 plots available at 176-177 sq yd.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2vw,32px);margin-top:48px;">
+      <div class="reveal" style="padding:clamp(32px,4vw,56px);background:var(--paper);border-radius:4px;border:1px solid var(--paper-stone);">
+        <span class="eyebrow" style="color:var(--terracotta);">Pre-Launch</span>
+        <h3 style="font-family:var(--ff-display);font-style:italic;font-size:clamp(42px,5vw,64px);color:var(--gold);margin-top:14px;">₹90,000</h3>
+        <p style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-soft);margin-top:4px;">Per Sq Yd</p>
+        <p style="font-size:14px;color:var(--text-mid);margin-top:20px;line-height:1.7;">Limited pre-launch inventory. Available to early registrations only. Price lock before official launch announcement.</p>
+        <span class="feature-card-tag" style="margin-top:24px;">Current Offer</span>
+      </div>
+      <div class="reveal delay-2" style="padding:clamp(32px,4vw,56px);background:var(--paper);border-radius:4px;border:1px solid var(--paper-stone);">
+        <span class="eyebrow" style="color:var(--forest);">Launch Price</span>
+        <h3 style="font-family:var(--ff-display);font-style:italic;font-size:clamp(42px,5vw,64px);color:var(--ink);margin-top:14px;">₹1.12–1.25L</h3>
+        <p style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-soft);margin-top:4px;">Per Sq Yd</p>
+        <p style="font-size:14px;color:var(--text-mid);margin-top:20px;line-height:1.7;">Official launch pricing post announcement. 25-38% above pre-launch rates. Standard payment plan applicable.</p>
+        <span class="feature-card-tag" style="margin-top:24px;">Upcoming</span>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:48px;padding:32px;background:var(--paper);border:1px solid var(--paper-stone);border-radius:4px;">
+      <h4 style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Plot Sizes Available</h4>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <div style="text-align:center;padding:20px;border:1px solid var(--paper-stone);border-radius:4px;">
+          <strong style="font-family:var(--ff-display);font-style:italic;font-size:32px;color:var(--ink);">126</strong>
+          <span style="display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-soft);margin-top:4px;">Sq Yd</span>
+        </div>
+        <div style="text-align:center;padding:20px;border:1px solid var(--paper-stone);border-radius:4px;">
+          <strong style="font-family:var(--ff-display);font-style:italic;font-size:32px;color:var(--ink);">176</strong>
+          <span style="display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-soft);margin-top:4px;">Sq Yd · Phase 1</span>
+        </div>
+        <div style="text-align:center;padding:20px;border:1px solid var(--paper-stone);border-radius:4px;">
+          <strong style="font-family:var(--ff-display);font-style:italic;font-size:32px;color:var(--ink);">177</strong>
+          <span style="display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-soft);margin-top:4px;">Sq Yd · Phase 1</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section-tight" style="background:linear-gradient(135deg,var(--gold-deep) 0%,var(--gold) 50%,#D4B377 100%);color:var(--ink);">
+  <div class="container" style="text-align:center;max-width:780px;">
+    <span class="eyebrow reveal" style="color:rgba(14,13,11,0.6);">Site Visit · Free Pickup from Delhi NCR</span>
+    <h2 class="display-lg reveal delay-1" style="margin-top:18px;color:var(--ink);">
+      Book Your Site Visit.
+    </h2>
+    <p class="reveal delay-2" style="margin-top:16px;font-size:16px;color:rgba(14,13,11,0.7);max-width:520px;margin-left:auto;margin-right:auto;">
+      Walk the plot. See the infrastructure. Read the title documents. We arrange free pickup from Delhi NCR.
+    </p>
+    <form data-lead-form="Bahadurgarh Site Visit" class="reveal delay-3" style="margin-top:40px;display:flex;flex-wrap:wrap;gap:12px;max-width:580px;margin-left:auto;margin-right:auto;justify-content:center;">
+      <input type="text" name="name" required placeholder="Your Name" class="form-input" style="flex:1;min-width:160px;background:rgba(255,255,255,0.95);">
+      <input type="tel" name="phone" required placeholder="WhatsApp Number" class="form-input" style="flex:1;min-width:160px;background:rgba(255,255,255,0.95);">
+      <button type="submit" class="btn" style="background:var(--ink);color:var(--paper);width:100%;">
+        Schedule Site Visit <span style="font-size:14px;">→</span>
+      </button>
+    </form>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-<div class="container">
-<div class="footer-grid">
-<div class="footer-brand">
-<div class="logo">
-<span class="logo-main">Estate</span>
-<span class="logo-sub">by HOMEGRAM</span>
-</div>
-<p>Premium real estate advisory and development since 2014. Helping families build wealth through strategically located plotted land investments.</p>
-</div>
-<div>
-<h4>Projects</h4>
-<ul>
-<li><a href="bahadurgarh.html">Bahadurgarh NCR</a></li>
-<li><a href="lansdowne.html">Lansdowne Hills</a></li>
-</ul>
-</div>
-<div>
-<h4>Company</h4>
-<ul>
-<li><a href="index.html">About Us</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-<div>
-<h4>Get in Touch</h4>
-<div class="footer-contact-item">
-<i class="hgi-stroke hgi-call"></i>
-<span>+91 96548 03560</span>
-</div>
-<div class="footer-contact-item">
-<i class="hgi-stroke hgi-mail-01"></i>
-<span>sharma.manish53@gmail.com</span>
-</div>
-<div class="footer-contact-item">
-<i class="hgi-stroke hgi-location-05"></i>
-<span>M3M Prive, Sector 73, Gurugram, Haryana</span>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-&copy; 2024 Estate by HOMEGRAM. All rights reserved. | HomeGram Real Estate
-</div>
-</div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-mark">H</span>
+          <span class="nav-logo-text">
+            <span class="nav-logo-name">HomeGram</span>
+            <span class="nav-logo-tag">Estate · Pvt Ltd</span>
+          </span>
+        </a>
+        <p>Curating premium plotted developments across India's most considered corridors. Heritage-themed living, infrastructure-first delivery.</p>
+      </div>
+      <div>
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="bahadurgarh.html">The Heritage · Bahadurgarh</a></li>
+          <li><a href="lansdowne.html">The Heritage · Lansdowne</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="about.html#vision">Vision</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item"><i class="hgi-stroke hgi-call-02"></i><span>+91 96548 03560</span></div>
+        <div class="footer-contact-item"><i class="hgi-stroke hgi-mail-01"></i><span>contact@homegramestate.in</span></div>
+        <div class="footer-contact-item"><i class="hgi-stroke hgi-location-05"></i><span>M3M Prive, Sector 73,<br>Gurugram, Haryana 122004</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 HomeGram Estate Pvt Ltd. All rights reserved. RERA registration in progress.</p>
+      <div class="footer-socials">
+        <a href="tel:+919654803560" aria-label="Call"><i class="hgi-stroke hgi-call-02"></i></a>
+        <a href="https://wa.me/919654803560" target="_blank" aria-label="WhatsApp"><i class="hgi-stroke hgi-whatsapp"></i></a>
+        <a href="mailto:contact@homegramestate.in" aria-label="Email"><i class="hgi-stroke hgi-mail-01"></i></a>
+        <a href="#" aria-label="Instagram"><i class="hgi-stroke hgi-instagram"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<a href="https://wa.me/919654803560" target="_blank" class="whatsapp-float">
-<i class="hgi-stroke hgi-whatsapp"></i>
+<a href="https://wa.me/919654803560?text=Hi%2C%20I%27m%20interested%20in%20The%20Heritage%20Bahadurgarh." target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <i class="hgi-stroke hgi-whatsapp"></i>
 </a>
 
-<script>
-window.addEventListener('scroll',()=>{document.querySelector('.nav').classList.toggle('scrolled',window.scrollY>50)});
-function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('active')}
-const reveals=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-reveals.forEach(el=>observer.observe(el));
-</script>
+<script src="assets/script.js"></script>
 </body>
 </html>
