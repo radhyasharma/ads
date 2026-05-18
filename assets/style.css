@@ -896,6 +896,10 @@ input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;border
   display:flex;align-items:center;gap:12px;
   font-size:14px;color:rgba(250,246,238,0.8);padding:10px 0;
 }
+.cream .premium-checklist li,.light .premium-checklist li{color:var(--ink)}
+.cta-section h2,.cta-section .display-md{color:var(--paper)}
+.cta-section .lead{color:rgba(250,246,238,0.7)}
+.cta-section .eyebrow{color:var(--gold)}
 .premium-checklist li i{color:var(--gold);font-size:18px;flex-shrink:0}
 
 /* ---------- PHILOSOPHY PILLARS ---------- */
