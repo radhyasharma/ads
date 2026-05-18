@@ -9,10 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{background:radial-gradient(ellipse at 50% 40%,#0f0a05 0%,#070503 100%);min-height:100vh;font-family:'Josefin Sans',sans-serif;color:#f5f0e6;overflow-x:hidden}
+body{background:transparent;min-height:100vh;font-family:'Josefin Sans',sans-serif;color:#f5f0e6;overflow-x:hidden}
 #connectivity{padding:40px 4%}
 .si{max-width:1480px;margin:0 auto}
-.metro-stage{position:relative;width:100%;border-radius:12px;overflow:hidden;background:radial-gradient(ellipse at 50% 60%,#1a140a 0%,#0a0704 100%);border:1px solid rgba(201,168,76,0.15);box-shadow:0 0 60px rgba(201,168,76,0.05)}
+.metro-stage{position:relative;width:100%;overflow:visible;background:transparent}
 .metro-stage svg{display:block;width:100%;height:auto}
 .status-line{text-align:center;margin-top:18px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#d4c9b0;min-height:1.6em;transition:opacity 0.4s}
 .controls{display:flex;justify-content:center;gap:16px;margin-top:16px}
@@ -32,7 +32,7 @@ body{background:radial-gradient(ellipse at 50% 40%,#0f0a05 0%,#070503 100%);min-
 <section id="connectivity">
 <div class="si">
 <div class="metro-stage">
-<svg id="metroSvg" viewBox="0 0 1440 460" xmlns="http://www.w3.org/2000/svg">
+<svg id="metroSvg" viewBox="0 0 1440 520" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <linearGradient id="trackGrad" x1="0%" y1="0%" x2="100%" y2="0%">
 <stop offset="0%" stop-color="#8b6914"/>
@@ -305,10 +305,10 @@ stationData.forEach((s,i)=>{
 
   // Label
   const label = document.createElementNS("http://www.w3.org/2000/svg","text");
-  label.setAttribute("x","0"); label.setAttribute("y","30");
+  label.setAttribute("x","0"); label.setAttribute("y","36");
   label.setAttribute("text-anchor","middle");
   label.setAttribute("font-family","Cinzel, serif");
-  label.setAttribute("font-size", s.final ? "9" : "8");
+  label.setAttribute("font-size", s.final ? "12" : "10.5");
   label.setAttribute("fill","#6b5a2e");
   label.setAttribute("class","stLabel");
   label.textContent = s.name;

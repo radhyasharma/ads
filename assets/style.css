@@ -586,6 +586,23 @@ input,textarea,select{font-family:inherit;font-size:inherit;color:inherit;border
   box-shadow:0 24px 48px rgba(14,13,11,0.08);border-color:rgba(184,151,88,0.4);
 }
 .light .feature-card p,.cream .feature-card p{color:var(--text-mid)}
+.light .feature-card h3,.cream .feature-card h3{color:var(--ink)}
+.light .model-card,.cream .model-card{background:var(--paper);border-color:var(--paper-stone)}
+.light .model-card h3,.cream .model-card h3{color:var(--ink)}
+.light .model-card p,.cream .model-card p{color:var(--text-mid)}
+.light .model-card .model-tag,.cream .model-card .model-tag{color:var(--gold-deep);border-color:rgba(139,111,54,0.4)}
+.light .lifestyle-card,.cream .lifestyle-card{background:var(--paper);border-color:var(--paper-stone)}
+.light .lifestyle-card h4,.cream .lifestyle-card h4{color:var(--ink)}
+.light .lifestyle-card p,.cream .lifestyle-card p{color:var(--text-mid)}
+.light .testimonial-card,.cream .testimonial-card{background:var(--paper);border-color:var(--paper-stone)}
+.light .testimonial-card blockquote,.cream .testimonial-card blockquote{color:var(--ink)}
+.light .testimonial-card .author-info h4,.cream .testimonial-card .author-info h4{color:var(--ink)}
+.light .testimonial-card .author-info p,.cream .testimonial-card .author-info p{color:var(--text-soft)}
+.light .calculator-card,.cream .calculator-card{background:var(--paper);border-color:var(--paper-stone)}
+.light .calculator-card label,.cream .calculator-card label{color:var(--text-mid)}
+.light .calculator-card label span:last-child,.cream .calculator-card label span:last-child{color:var(--gold-deep)}
+.light .calculator-result .result-item strong,.cream .calculator-result .result-item strong{color:var(--gold-deep)}
+.light .calculator-result .result-item span,.cream .calculator-result .result-item span{color:var(--text-soft)}
 
 /* ---------- STAT BANDS ---------- */
 .stat-band{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink-line);border-bottom:1px solid var(--ink-line)}
